@@ -1,0 +1,12 @@
+@import '../../style/var.scss';
+
+
+.language_toggle {
+    select {
+        padding: 0.5rem 1rem;
+
+        color: $primary;
+
+        appearance: none;
+    }
+}

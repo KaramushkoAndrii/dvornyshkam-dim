@@ -1,0 +1,74 @@
+@import '../../style/var.scss';
+
+
+.navigation {
+    position: fixed;
+    top: 10dvh;
+    left: 0;
+
+    //display: none;
+    width: 100%;
+    height: calc(100vh - 10dvh);
+
+    background-color: $secondary;
+    z-index: 999;
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-100%);
+    visibility: hidden;
+    pointer-events: none;
+
+    &.open {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+
+    &__list-item {
+        margin: 1rem 0;
+    }
+}
+
+
+
+.burger__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: calc(100% - 1rem);
+
+    gap: 0.5rem;
+
+}
+
+.burger__bar {
+    width: 100%;
+    height: 0.2rem;
+    background-color: $primary;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.close {
+    .burger__bar:nth-child(1) {
+        position: relative;
+        transform: rotate(45deg) translateY(8px);
+    }
+    .burger__bar:nth-child(2) {
+        display: none;
+    }
+    .burger__bar:nth-child(3) {
+        position: relative;
+        transform: rotate(-45deg) translateY(-7px);
+    }
+}
