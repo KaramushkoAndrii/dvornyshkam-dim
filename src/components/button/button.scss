@@ -1,0 +1,10 @@
+
+
+@import '../../style/var.scss';
+
+.mainButton {
+    background-color: $primary;
+    width: 5rem;
+    height: 2.5rem;
+    border: 1px solid $secondary;
+}
