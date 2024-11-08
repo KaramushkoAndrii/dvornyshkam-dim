@@ -1,0 +1,7 @@
+@import './var.scss';
+
+@mixin container($paddingX: 2rem, $paddingY:0, $max-width: $large, $marginTop: 0, $marginX: auto, $marginBottom: 0) {
+    padding: $paddingY $paddingX;
+    margin: $marginTop $marginX $marginBottom;
+    max-width: $max-width;
+}
