@@ -2,7 +2,7 @@
 @import '../../style/mixins.scss';
 
 .hero {
-    @include container($paddingY:2rem, $marginTop: 7vh);
+    @include container($paddingY:2rem, $marginTop: 8vh);
 
     display: flex;
     flex-direction: column;
