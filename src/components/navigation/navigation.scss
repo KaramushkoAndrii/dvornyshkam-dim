@@ -8,13 +8,13 @@
 
     width: 100%;
     height: calc(100vh - 10dvh);
+    gap: 5rem;
 
     background-color: $secondary;
     z-index: 999;
 
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease;
     opacity: 0;
-    transform: translateY(-100%);
     visibility: hidden;
     pointer-events: none;
 
@@ -27,14 +27,41 @@
         text-align: center;
 
         opacity: 1;
-        transform: translateY(0);
         visibility: visible;
         pointer-events: auto;
     }
 
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: $list-item-padding;
+        padding: 0 $list-padding-x;
+        width: 100%;
+    }
+
 
     &__list-item {
-        margin: 1rem 0;
+        border: 1px solid $primary;
+        border-radius: $main-border-radius;
+
+        span {
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem calc($list-padding-x - 2.5rem);
+
+            color: $white;
+        }
+
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 }
 

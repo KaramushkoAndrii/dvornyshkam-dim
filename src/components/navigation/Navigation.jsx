@@ -3,6 +3,10 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
+import Contacts from '../contacts/Contacts';
+
+import {ReactComponent as ArrowRightIcon} from '../../images/arrow-right.svg';
+
 import './navigation.scss';
 
 const Navigation = ({list}) => {
@@ -31,10 +35,12 @@ const Navigation = ({list}) => {
                 <ul className='navigation__list'>
                     {list.map((item, key) => (
                         <li key={key} className='navigation__list-item'>
-                            <a href='/'>{t(`${item.title}`)}</a>
+                            <a href='/'><span>{t(`${item.title}`)}</span> <ArrowRightIcon /></a>
                         </li>
                     ))}
                 </ul>
+
+                <Contacts />
             </nav>
         </div>
     )
