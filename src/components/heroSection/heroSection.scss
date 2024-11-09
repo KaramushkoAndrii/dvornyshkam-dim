@@ -2,19 +2,19 @@
 @import '../../style/mixins.scss';
 
 .hero {
-    @include container();
+    @include container($marginTop: 10vh);
 
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
     gap: 1.5rem;
 
     color: $white;
 
     background-image: url('../../../public/images/heroBg.png');
     background-size: cover;
-    background-position: right;
+    background-position: -53rem;
     background-repeat: no-repeat;
 
     &__title {
