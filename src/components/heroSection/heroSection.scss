@@ -2,7 +2,7 @@
 @import '../../style/mixins.scss';
 
 .hero {
-    @include container($marginTop: 10vh);
+    @include container($marginTop: 9vh);
 
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@
 
     background-image: url('../../../public/images/heroBg.png');
     background-size: cover;
-    background-position: -53rem;
+    background-position: -52rem;
     background-repeat: no-repeat;
 
     &__title {
