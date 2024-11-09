@@ -4,5 +4,11 @@
 @import '../../style/mixins.scss';
 
 .search {
-    @include container($paddingY: 0, $marginTop: 0)
+    @include container($paddingY: 0, $marginTop: 0);
+
+    background-color: $secondary;
+
+    &__title {
+        text-align: center;
+    }
 }

@@ -16,13 +16,16 @@
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
+    background-color: $secondary;
 
     &__title {
         max-width: 90%;
         font-size: 2rem;
+        background-color: transparent;
     }
 
     &__description {
         max-width: 75%;
+        background-color: transparent;
     }
 }

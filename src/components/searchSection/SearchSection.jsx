@@ -1,4 +1,6 @@
 
+import RandomAnimalCard from '../personalCard/RandomAnimalCard';
+import Animals from '../../data/animalsDB';
 
 import { useTranslation } from 'react-i18next';
 
@@ -12,6 +14,8 @@ const SearchSection = () => {
     return (
         <section className='search'>
             <h2 className='search__title'>{t('search.title')}</h2>
+
+            <RandomAnimalCard animal={Animals[0]} />
         </section>
     )
 }
