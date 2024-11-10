@@ -6,7 +6,7 @@ const Animals = [
         name: "Цезар",
         age: "5 років",
         gender: "хпопец",
-        img: "./images/dogs/cesar.png",
+        img: "./images/dogs/cesar2.jpg",
         vaccine: true,
         animals: true
     },
