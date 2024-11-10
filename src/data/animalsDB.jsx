@@ -3,12 +3,12 @@
 const Animals = [
     {
         id: 1,
-        name: "Кейдж",
-        age: "10",
+        name: "Цезар",
+        age: "5 років",
         gender: "хпопец",
-        img: "",
+        img: "./images/dogs/cesar.png",
         vaccine: true,
-        animals: false
+        animals: true
     },
     {
         id: 2,

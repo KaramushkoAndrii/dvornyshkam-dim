@@ -1,4 +1,6 @@
 
+import { useTranslation } from "react-i18next";
+
 
 import { FaDog } from "react-icons/fa6";
 import { TbVaccine } from "react-icons/tb";
@@ -8,7 +10,10 @@ import './randomAnimalCard.scss';
 
 const RandomAnimalCard = ({animal}) => {
 
-    const {img, name, gender, age, vaccine, animals} = animal
+    const {img, name, gender, age, vaccine, animals} = animal;
+
+    const { t } = useTranslation();
+
     return (
         <div className='random-animal'>
             <div className='animal__info'>
@@ -24,6 +29,10 @@ const RandomAnimalCard = ({animal}) => {
             <div className='animal__characteristics'>
                 <div className="animal__animals"> <FaDog  style={{fill: animals ? 'green' : 'red'}}/> </div>
                 <div className="animal__vaccine"> <TbVaccine style={{fill: vaccine ? 'green' : 'red', stroke: vaccine ? 'green' : 'red'}}/> </div>
+            </div>
+            <div className="animal__buttons">
+                <button className="animal__choice">{t('search.choice')}</button>
+                <button className="animal__choice">{t('search.trustee')}</button>
             </div>
         </div>
     )

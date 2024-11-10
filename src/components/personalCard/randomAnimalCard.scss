@@ -2,3 +2,69 @@
 
 @import '../../style/var.scss';
 @import '../../style/mixins.scss';
+
+
+.random-animal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 2rem;
+
+    background-color: $primary;
+
+    border-radius: 2rem;
+
+    .animal__picture {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .animal__description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        padding: 1.5rem 0;
+    }
+
+    .animal__name {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 0.5rem;
+    }
+
+    .animal__characteristics {
+        display: flex;
+        gap: 2rem;
+        padding-bottom: 1.5rem;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    .animal__buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        padding-bottom: 2rem;
+    }
+
+    .animal__choice {
+        padding: 1rem 1.5rem;
+        border-radius: 1rem;
+
+        color: $white;
+        background-color: $secondary;
+    }
+}
