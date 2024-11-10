@@ -16,12 +16,16 @@
 
     border-radius: 2rem;
 
+    .animal__info {
+        width: 100%;
+    }
+
     .animal__picture {
         width: 100%;
 
         img {
             width: 100%;
-            border-radius: 2rem 2rem 0 0;
+            border-radius: 2rem 2rem 1rem 1rem;
         }
     }
 
@@ -35,9 +39,16 @@
     }
 
     .animal__name {
-        text-align: center;
         width: 100%;
         padding-bottom: 0.5rem;
+
+        text-align: center;
+
+        font-size: clamp(2rem, 6vw, 12rem);
+    }
+
+    .animal__gender, .animal__age {
+        font-size: clamp(1rem, 4vw, 6rem);
     }
 
     .animal__characteristics {
