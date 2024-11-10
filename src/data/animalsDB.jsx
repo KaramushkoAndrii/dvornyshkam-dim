@@ -6,44 +6,35 @@ const Animals = [
         name: "Цезар",
         age: "5 років",
         gender: "хпопец",
-        img: "./images/dogs/cesar2.jpg",
+        img: "./images/dogs/cesar.webp",
         vaccine: true,
         animals: true
     },
     {
         id: 2,
-        name: "",
-        age: "",
-        gender: "",
-        img: "",
-        vaccine: true,
-        animals: false
+        name: "Фоксі",
+        age: "1 рік",
+        gender: "дівчинка",
+        img: "./images/dogs/sasha.webp",
+        vaccine: false,
+        animals: true
     },
     {
         id: 3,
-        name: "",
-        age: "",
-        gender: "",
-        img: "",
+        name: "Патрон",
+        age: "3 роки",
+        gender: "хпопец",
+        img: "./images/dogs/patron.webp",
         vaccine: true,
         animals: false
     },
     {
         id: 4,
-        name: "",
-        age: "",
-        gender: "",
-        img: "",
-        vaccine: true,
-        animals: false
-    },
-    {
-        id: 5,
-        name: "",
-        age: "",
-        gender: "",
-        img: "",
-        vaccine: true,
+        name: "Азазело",
+        age: "4 роки",
+        gender: "хпопец",
+        img: "./images/dogs/az.webp",
+        vaccine: false,
         animals: false
     }
 ]

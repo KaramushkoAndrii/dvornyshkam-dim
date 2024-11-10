@@ -4,9 +4,13 @@
 
 .mainButton {
     width: max-content;
-    padding: 0.5rem;
-    //height: 2.5rem;
+    padding: 1rem 1.5rem;
     border: 1px solid $primary;
+
+    font-size: clamp(1rem, 3vw, 4rem);
+
+    border-radius: 1rem;
+
     background-color: $secondary;
     color: $white;
 }
