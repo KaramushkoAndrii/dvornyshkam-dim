@@ -23,6 +23,7 @@
 
         img {
             width: 100%;
+
             border-radius: 2rem 2rem 1rem 1rem;
         }
     }
@@ -62,7 +63,6 @@
 
     .animal__buttons {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
