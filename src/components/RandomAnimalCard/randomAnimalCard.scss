@@ -25,6 +25,8 @@
             width: 100%;
 
             border-radius: 2rem 2rem 1rem 1rem;
+
+            object-fit: cover;
         }
     }
 
@@ -39,20 +41,20 @@
 
     .animal__name {
         width: 100%;
-        padding-bottom: 0.5rem;
+        padding-bottom: 0.25rem;
 
         text-align: center;
 
-        font-size: clamp(2rem, 6vw, 12rem);
+        font-size: clamp(1.5rem, 5vw, 10rem);
     }
 
     .animal__gender, .animal__age {
-        font-size: clamp(1rem, 4vw, 6rem);
+        font-size: clamp(0.8rem, 3vw, 5rem);
     }
 
     .animal__characteristics {
-        display: flex;
-        gap: 2rem;
+        display: none;
+        gap: 1rem;
         padding-bottom: 1.5rem;
 
         svg {
@@ -67,14 +69,14 @@
         align-items: center;
         gap: 0.5rem;
 
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
     }
 
     .animal__choice {
-        padding: 1rem 1.5rem;
+        padding: 0.75rem 1rem;
         border-radius: 1rem;
 
-        font-size: clamp(1rem, 4vw, 6rem);
+        font-size: clamp(0.8rem, 3vw, 5rem);
 
         color: $white;
         background-color: $secondary;
