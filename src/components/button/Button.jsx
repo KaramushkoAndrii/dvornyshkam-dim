@@ -3,9 +3,14 @@
 import './button.scss';
 
 
-const Button = ({text, onClick}) => {
+const Button = ({text, onClick, disabled}) => {
     return (
-        <button onClick={onClick} className='mainButton'>{`${text}`}</button>
+        <button 
+            className='mainButton'
+            onClick={onClick}
+            disabled={disabled}>
+                {`${text}`}
+        </button>
     )
 }
 

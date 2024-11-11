@@ -13,4 +13,10 @@
 
     background-color: $secondary;
     color: $white;
+
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
 }
