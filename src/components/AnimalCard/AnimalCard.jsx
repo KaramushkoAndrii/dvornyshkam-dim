@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { FaDog } from "react-icons/fa6";
 import { TbVaccine } from "react-icons/tb";
 
-import './randomAnimalCard.scss';
+import './AnimalCard.scss';
 
 
 const RandomAnimalCard = ({animal}) => {
@@ -15,7 +15,7 @@ const RandomAnimalCard = ({animal}) => {
     const { t } = useTranslation();
 
     return (
-        <div className='random-animal'>
+        <div className='animal'>
             <div className='animal__info'>
                 <div className='animal__picture'>
                     <img src={img} alt={name} />

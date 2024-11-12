@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import RandomAnimalCard from '../RandomAnimalCard/RandomAnimalCard';
+import AnimalCard from '../AnimalCard/AnimalCard';
 import Animals from '../../data/animalsDB';
 import Button from '../button/Button';
 
@@ -44,7 +44,7 @@ const SearchSection = () => {
             <h2 className='search__title'>{t('search.title')}</h2>
 
             <div className={`card-container ${isAnimating ? 'rotate' : ''}`}>
-                <RandomAnimalCard animal={currentAnimal} />
+                <AnimalCard animal={currentAnimal} />
             </div>
 
             <div className='search__button-group'>

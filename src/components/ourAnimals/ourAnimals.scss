@@ -1,0 +1,24 @@
+
+
+@import '../../style/var.scss';
+@import '../../style/mixins.scss';
+
+
+.animals {
+    @include container();
+
+
+    &__list {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 2rem;
+
+        img {
+            height: 35dvh;
+        }
+    }
+
+    .animal__choice:nth-child(2) {
+        display: none;
+    }
+}
