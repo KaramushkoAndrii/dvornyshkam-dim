@@ -1,0 +1,8 @@
+
+
+@import '../../style/var.scss';
+@import '../../style/mixins.scss';
+
+.about {
+    @include container();
+}
