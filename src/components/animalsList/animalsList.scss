@@ -1,15 +1,20 @@
+
 @import '../../style/var.scss';
+@import '../../style/mixins.scss';
 
 .animals__title {
-    padding: 0 0 2rem;
+    padding: 0 2rem;
 
     font-size: clamp(2rem, 8vw, 8rem)
 }
 
 .animals__list {
-    display: grid;
-    grid-template-columns: auto;
+    @include container();
+    display: flex;
     gap: 2rem;
+
+    overflow-x: scroll;
+    scroll-behavior: smooth;
 
     img {
         height: 35vh;
