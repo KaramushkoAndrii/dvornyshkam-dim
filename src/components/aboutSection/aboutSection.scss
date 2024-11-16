@@ -12,13 +12,51 @@
     &__description {
         padding: 2rem 0;
 
-        font-size: clamp(0.75rem, 3.5vw, 5rem);
+        font-size: clamp(1rem, 4vw, 6rem);
+    }
+
+    &__info-list {
+        display: flex;
+        flex-direction: column;
+
+        padding: 3rem 1rem;
+
+        gap: 2rem;
+
+
+        border-radius: $main-border-radius;
+
+        background-color: $primary;
+
+        &--item {
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            font-size: clamp(3rem, 6vw, 12rem);
+
+            span {
+                font-size: clamp(1.5rem, 3vw, 6rem);
+            }
+
+            &:not(:last-of-type):before {
+                position: absolute;
+                content: "";
+                bottom: calc(-1rem - 2px);
+                height: 2px;
+                width: 100%;
+                background-color: $secondary;
+            }
+        }
     }
 
     &__list {
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
+        padding-top: 4rem;
     }
 
 
@@ -45,7 +83,7 @@
 
         &--content {
             max-width: 50%;
-            padding-bottom: 1rem;
+            padding-bottom: 1.5rem;
 
             font-size: clamp(0.75rem, 3.5vw, 5rem);
         }

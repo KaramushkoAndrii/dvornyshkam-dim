@@ -1,7 +1,7 @@
 
-import AnimalCard from '../AnimalCard/AnimalCard';
 import Animals from '../../data/animalsDB';
-import Button from '../button/Button';
+
+import AnimalsList from '../animalsList/AnimalsList';
 
 import './ourAnimals.scss';
 
@@ -9,13 +9,8 @@ import './ourAnimals.scss';
 const OurAnimals = () => {
     return (
         <section className='animals'>
-            <ul className='animals__list'>
-                {Animals.map((item, key) => (
-                    <li key={key} className='animal__list--item'>
-                        {<AnimalCard animal={item}/>}
-                    </li>
-                ))}
-            </ul>
+            <AnimalsList title={'lists-title.dogs'} dataList={Animals} btnText={'buttons.more-dogs'}/>
+            <AnimalsList title={'lists-title.cats'} dataList={Animals} btnText={'buttons.more-cats'}/>
         </section>
     )
 }

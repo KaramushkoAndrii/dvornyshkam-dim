@@ -1,0 +1,37 @@
+@import '../../style/var.scss';
+
+.animals__title {
+    padding: 0 0 2rem;
+
+    font-size: clamp(2rem, 8vw, 8rem)
+}
+
+.animals__list {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 2rem;
+
+    img {
+        height: 35dvh;
+    }
+}
+
+.animal__choice:nth-child(2) {
+    display: none;
+}
+
+.animals__more-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 4rem;
+
+    &:last-of-type {
+        padding: 2rem 0;
+    }
+
+    button {
+        border: 1px solid $secondary;
+        background-color: $primary;
+    }
+}

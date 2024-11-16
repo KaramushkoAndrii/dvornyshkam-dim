@@ -25,7 +25,6 @@ const SearchSection = () => {
 
     const animalRerol = () => {
         setIsAnimating(true);
-        // setCurrentAnimal(getRandomAnimal())
     }
 
     useEffect(() => {
