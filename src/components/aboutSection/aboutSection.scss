@@ -45,9 +45,10 @@
                 position: absolute;
                 content: "";
                 bottom: calc(-1rem - 2px);
-                height: 2px;
+                height: 1px;
                 width: 100%;
                 background-color: $secondary;
+                opacity: 0.7;
             }
         }
     }
