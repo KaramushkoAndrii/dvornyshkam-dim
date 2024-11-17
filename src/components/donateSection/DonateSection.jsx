@@ -16,7 +16,12 @@ const DonateSection = () => {
             <ul className='donate__option'>
                 {DonateList.map((item, key) => (
                     <li key={key}>
-                        <a href={item.src} target='_blank' rel="noopener noreferrer">{item.name}</a>
+                        <a href={item.src} target='_blank' rel="noopener noreferrer">
+                            <div className='img__container'>
+                                <img src={item.logo} alt={`${item.name}logo`}/>
+                            </div>
+                            {item.name}
+                        </a>
                     </li>
                 ))}
             </ul>
