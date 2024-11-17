@@ -7,6 +7,7 @@ import SearchSection from './components/searchSection/SearchSection';
 import AboutSection from './components/aboutSection/AboutSection';
 import OurAnimals from './components/ourAnimals/OurAnimals';
 import HelpSection from './components/helpSection/HelpSection';
+import DonateSection from './components/donateSection/DonateSection';
 
 import './index.scss'
 
@@ -21,6 +22,7 @@ function App() {
         <AboutSection />
         <OurAnimals />
         <HelpSection />
+        <DonateSection />
     </div>
   );
 }
