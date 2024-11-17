@@ -10,7 +10,7 @@ const DonateList = [
     },
     {
         name: 'monobank',
-        logo: './images/monoLogo.webP',
+        logo: './images/monoLogo.svg',
         src: 'https://send.monobank.ua/jar/2NuiKeFtMi'
     }
 ]
