@@ -5,7 +5,7 @@
 
 
 .donate {
-    @include container($marginTop: 10rem);
+    @include container($marginTop: 10rem, $marginBottom: 4rem);
     position: relative;
     background-color: $primary;
 

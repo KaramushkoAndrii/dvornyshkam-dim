@@ -8,6 +8,7 @@ import AboutSection from './components/aboutSection/AboutSection';
 import OurAnimals from './components/ourAnimals/OurAnimals';
 import HelpSection from './components/helpSection/HelpSection';
 import DonateSection from './components/donateSection/DonateSection';
+import Footer from './components/footer/Footer';
 
 import './index.scss'
 
@@ -23,6 +24,7 @@ function App() {
         <OurAnimals />
         <HelpSection />
         <DonateSection />
+        <Footer />
     </div>
   );
 }
