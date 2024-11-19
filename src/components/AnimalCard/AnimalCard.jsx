@@ -8,7 +8,7 @@ import { TbVaccine } from "react-icons/tb";
 import './AnimalCard.scss';
 
 
-const RandomAnimalCard = ({animal}) => {
+const RandomAnimalCard = ({animal, isOpen}) => {
 
     const {img, name, gender, age, vaccine, animals} = animal;
 
@@ -31,8 +31,8 @@ const RandomAnimalCard = ({animal}) => {
                 <div className="animal__vaccine"> <TbVaccine style={{fill: vaccine ? 'green' : 'red', stroke: vaccine ? 'green' : 'red'}}/> </div>
             </div>
             <div className="animal__buttons">
-                <button className="animal__choice">{t('search.choice')}</button>
-                <button className="animal__choice">{t('search.trustee')}</button>
+                <button className="animal__choice" onClick={isOpen}>{t('search.choice')}</button>
+                <button className="animal__choice" onClick={isOpen}>{t('search.trustee')}</button>
             </div>
         </div>
     )

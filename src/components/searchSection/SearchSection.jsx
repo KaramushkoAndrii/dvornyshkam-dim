@@ -10,7 +10,7 @@ import Button from '../button/Button';
 import './searchSection.scss';
 
 
-const SearchSection = () => {
+const SearchSection = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -43,7 +43,7 @@ const SearchSection = () => {
             <h2 className='search__title'>{t('search.title')}</h2>
 
             <div className={`card-container ${isAnimating ? 'rotate' : ''}`}>
-                <AnimalCard animal={currentAnimal} />
+                <AnimalCard animal={currentAnimal} isOpen={isOpen}/>
             </div>
 
             <div className='search__button-group'>
