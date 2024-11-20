@@ -32,8 +32,26 @@ const Modal = ({isModalOpen, isClose}) => {
                     <Input  type={'text'} 
                             name={'user_name'} 
                             id={'user_name'} 
-                            label={"Введіть ім'я"} 
+                            label={"Введіть ім'я"}
                             required />
+                    <Input type={'text'}
+                            name={'user_surname'}
+                            id={'user_surname'}
+                            label={'Ваше прізвище'}
+                            required/>
+                    <Input type={'tel'}
+                            name={'phone'}
+                            id={'phone'}
+                            label={'Номер телефону'}
+                            pattern = {'^\+?\d{10,15}$'}
+                            autocomplite={'tel'}
+                            required />
+                    <Input type={'email'}
+                            id={'email'}
+                            name={'email'}
+                            label={'Електронна пошта'}
+                            autocomplite={'email'}
+                            required/>
                 </div>
             </div>
         </div>

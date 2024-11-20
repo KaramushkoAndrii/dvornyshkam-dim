@@ -56,13 +56,21 @@
 
     .modal__header {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding-bottom: 2rem;
     }
 
     span {
-        width: 15%;
-    }
+        //width: 15%;
+        padding: 0.5rem 0.75rem;
 
-    .modal__title {
-        padding-bottom: 3rem;
+        background-color: $primary;
+
+        border: 1px solid $primary;
+        border-radius: 50%;
+
+        text-align: center;
     }
 }
