@@ -1,3 +1,7 @@
+@import '../../style/var.scss';
+@import '../../style/mixins.scss';
+
+
 .input-group {
   position: relative;
   margin: 2rem 0;
@@ -9,29 +13,33 @@
   left: 1rem;
   transform: translateY(-50%);
   font-size: 1rem;
-  color: #888;
+  color: $primary;
   transition: all 0.3s ease;
   pointer-events: none;
 }
 
 .input-label.filled {
   top: -0.8rem;
-  left: 0.8rem;
-  font-size: 0.75rem;
-  color: #007bff;
+  left: 0;
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  color: $white;
 }
 
 input {
   width: 100%;
   padding: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid $white;
   border-radius: 0.5rem;
   font-size: 1rem;
 
   &:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: $secondary;
   }
+}
+
+input[type="textarea"] {
+  height: 12vh;
 }
 
   

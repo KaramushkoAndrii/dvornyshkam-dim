@@ -16,9 +16,9 @@ const Header = () => {
 
             <Navigation list={navigationList} />
 
-            <a href='/' className='logo__wrapper'>
+            <Link to={'/'} className='logo__wrapper'>
                 <img className='logo' src="/logo.png" alt="logo"/>
-            </a>
+            </Link>
             
             <ChangeLng />
         </header>

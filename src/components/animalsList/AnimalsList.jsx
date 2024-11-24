@@ -6,7 +6,7 @@ import Button from '../button/Button';
 
 import './animalsList.scss';
 
-const AnimalsList = ({title, dataList, src, btnText}) => {
+const AnimalsList = ({title, dataList, src, btnText, isOpen}) => {
 
     const { t } = useTranslation();
     return (
@@ -15,7 +15,7 @@ const AnimalsList = ({title, dataList, src, btnText}) => {
             <ul className='animals__list'>
                 {dataList.slice(0, 3).map((item, key) => (
                     <li key={key} className='animal__list--item'>
-                        {<AnimalCard animal={item} />}
+                        {<AnimalCard animal={item} isOpen={isOpen}/>}
                     </li>
                 ))}
             </ul>

@@ -52,6 +52,11 @@ const Modal = ({isModalOpen, isClose}) => {
                             label={'Електронна пошта'}
                             autocomplite={'email'}
                             required/>
+
+                    <Input type={'textarea'}
+                            name={'user_masssge'}
+                            id={'user_masssge'}
+                            label={'Місце для ваших питань'}/>
                 </div>
             </div>
         </div>

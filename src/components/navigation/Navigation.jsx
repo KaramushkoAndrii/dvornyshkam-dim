@@ -35,7 +35,7 @@ const Navigation = ({list}) => {
                 <ul className='navigation__list'>
                     {list.map((item, key) => (
                         <li key={key} className='navigation__list-item'>
-                            <a href='/'><span>{t(`${item.title}`)}</span> <ArrowRightIcon /></a>
+                            <Link to={item.href}><span>{t(`${item.title}`)}</span> <ArrowRightIcon /></Link>
                         </li>
                     ))}
                 </ul>

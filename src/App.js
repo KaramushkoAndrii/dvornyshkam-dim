@@ -1,15 +1,11 @@
 
 import { Suspense, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Header from './components/header/Header';
-import HeroSection from './components/heroSection/HeroSection';
-import SearchSection from './components/searchSection/SearchSection';
-import AboutSection from './components/aboutSection/AboutSection';
-import OurAnimals from './components/ourAnimals/OurAnimals';
-import HelpSection from './components/helpSection/HelpSection';
-import DonateSection from './components/donateSection/DonateSection';
-import Footer from './components/footer/Footer';
+import Layout from './components/layout/Layout';
 import Modal from './components/modal/Modal';
+import HomePage from './pages/HomePage/HomePage';
+import AnimalsPage from './pages/AnimalsPage/AnimalsPage';
 
 import './index.scss'
 
@@ -29,14 +25,14 @@ function App() {
 
   return (
     <div className="App">
-        <Header />
-        <HeroSection />
-        <SearchSection isOpen={isOpen}/>
-        <AboutSection />
-        <OurAnimals />
-        <HelpSection />
-        <DonateSection />
-        <Footer />
+        <Router>
+          <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<HomePage isOpen={isOpen}/>} />
+                <Route path='animals' element={<AnimalsPage />} />
+              </Route>
+          </Routes>
+        </Router>
         <Modal isOpen={isOpen} isClose={isClose} isModalOpen={isModalOpen}/>
     </div>
   );
