@@ -8,7 +8,7 @@ import { TbVaccine } from "react-icons/tb";
 import './AnimalCard.scss';
 
 
-const RandomAnimalCard = ({animal, isOpen}) => {
+const AnimalCard = ({animal, isOpen}) => {
 
     const {img, name, gender, age, vaccine, animals} = animal;
 
@@ -38,4 +38,4 @@ const RandomAnimalCard = ({animal, isOpen}) => {
     )
 }
 
-export default RandomAnimalCard;
+export default AnimalCard;

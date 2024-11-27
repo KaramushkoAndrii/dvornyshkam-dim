@@ -6,6 +6,8 @@ import Layout from './components/layout/Layout';
 import Modal from './components/modal/Modal';
 import HomePage from './pages/HomePage/HomePage';
 import AnimalsPage from './pages/AnimalsPage/AnimalsPage';
+import DogPage from './pages/DogPage/DogPage';
+import CatPage from './pages/CatPage/CatPage';
 
 import './index.scss'
 
@@ -30,6 +32,8 @@ function App() {
               <Route path="/" element={<Layout />}>
                 <Route index element={<HomePage isOpen={isOpen}/>} />
                 <Route path='animals' element={<AnimalsPage />} />
+                <Route path='animals/dogs'element={<DogPage />} />
+                <Route path='animals/cats' element={<CatPage />} />
               </Route>
           </Routes>
         </Router>

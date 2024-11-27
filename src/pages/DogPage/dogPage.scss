@@ -1,0 +1,7 @@
+
+@import '../../style/var.scss';
+@import '../../style/mixins.scss';
+
+.dogPage__content {
+    @include container();
+}

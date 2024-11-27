@@ -6,7 +6,7 @@ const Animals = [
         name: "Цезар",
         age: "5 років",
         gender: "хпопец",
-        img: "./images/dogs/cesar.webp",
+        img: "/images/dogs/cesar.webp",
         vaccine: true,
         animals: true
     },
@@ -15,7 +15,7 @@ const Animals = [
         name: "Фоксі",
         age: "1 рік",
         gender: "дівчинка",
-        img: "./images/dogs/sasha.webp",
+        img: "/images/dogs/sasha.webp",
         vaccine: false,
         animals: true
     },
@@ -24,7 +24,7 @@ const Animals = [
         name: "Патрон",
         age: "3 роки",
         gender: "хпопец",
-        img: "./images/dogs/patron.webp",
+        img: "/images/dogs/patron.webp",
         vaccine: true,
         animals: false
     },
@@ -33,7 +33,7 @@ const Animals = [
         name: "Азазело",
         age: "4 роки",
         gender: "хпопец",
-        img: "./images/dogs/az.webp",
+        img: "/images/dogs/az.webp",
         vaccine: false,
         animals: false
     }
