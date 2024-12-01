@@ -1,7 +1,9 @@
 
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import AnimalCard from '../AnimalCard/AnimalCard';
 import Button from '../button/Button';
+
 
 
 import './animalsList.scss';
@@ -21,7 +23,9 @@ const AnimalsList = ({title, dataList, src, btnText, isOpen}) => {
             </ul>
             {dataList.length > 3 && (
                 <div className='animals__more-button'>
-                    <Button text={t(`${btnText}`)} />
+                    <Link to={src}>
+                        <Button text={t(`${btnText}`)} />
+                    </Link>
                 </div>
             )}
         </>
