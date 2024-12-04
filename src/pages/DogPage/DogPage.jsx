@@ -2,15 +2,20 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { FaDog } from "react-icons/fa6";
+import { TbVaccine } from "react-icons/tb";
+
 import AllAnimalsList from "../../components/allAnimalsList/AllAnimalsList";
 import animalsDB from "../../data/animalsDB";
+import Button from "../../components/button/Button";
 
 import './dogPage.scss';
 
-const DogPage = () => {
+const DogPage = (isOpen) => {
 
     const [visibleCards, setVisibleCards] = useState(4);
     const [isLoading, setIsLoading] = useState(false);
+    const [selectedAnimal, setSelectedAnimal] = useState(null);
 
     const { t } = useTranslation();
 
@@ -21,16 +26,47 @@ const DogPage = () => {
         setIsLoading(false);
     }
 
+    const handleAnimalSelect = (animal) => {
+        setSelectedAnimal(animal)
+    }
+
+    const handleCloseAside = () => {
+        setSelectedAnimal(null)
+    }
+
     return (
         <>
             <section className="dogPage">
                 <h2>{t('dog-page.title')}</h2>
                 <section className="dogPage__content">
-                    <AllAnimalsList list={animalsDB.slice(0, visibleCards)} /> {/* Показываем только часть списка */}
-                    <aside className="dogPage__aside">
-                        <div className="dogPage__aside-content">
-
-                        </div>
+                    <AllAnimalsList 
+                        list={animalsDB.slice(0, visibleCards)} 
+                        onAnimalSelect={handleAnimalSelect}/>
+                    <aside className={`dogPage__aside ${selectedAnimal ? 'open' : ''}`}>
+                        {selectedAnimal && (
+                            <div className="dogPage__aside-content">
+                                <header>
+                                    <button className="dogPage__close" 
+                                            onClick={handleCloseAside}>
+                                        X
+                                    </button>
+                                </header>
+                                <section>
+                                    <img src={selectedAnimal.img} alt={selectedAnimal.name} />
+                                    <h3>{selectedAnimal.name}</h3>
+                                    <h3>{selectedAnimal.gender}</h3>
+                                    <h3>{selectedAnimal.age}</h3>
+                                    <div>
+                                        <i> <FaDog  style={{fill: selectedAnimal.animals ? 'green' : 'red'}}/> </i>
+                                        <i> <TbVaccine style={{fill: selectedAnimal.vaccine ? 'green' : 'red', stroke: selectedAnimal.vaccine ? 'green' : 'red'}}/> </i>
+                                    </div>
+                                    <footer>
+                                        <Button text={"hello"} />
+                                        <Button text={"hello2"} />
+                                    </footer>
+                                </section>
+                            </div>
+                        )}
                     </aside>
                 </section>
 

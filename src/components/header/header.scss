@@ -1,4 +1,5 @@
 
+@import '../../style/mixins.scss';
 @import '../../style/var.scss';
 
 .header {
@@ -10,7 +11,7 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 10dvh;
+    height: $heade-height;
 
     z-index: 999;
 

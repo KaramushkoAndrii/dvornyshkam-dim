@@ -32,7 +32,7 @@ function App() {
               <Route path="/" element={<Layout />}>
                 <Route index element={<HomePage isOpen={isOpen}/>} />
                 <Route path='animals' element={<AnimalsPage />} />
-                <Route path='animals/dogs'element={<DogPage />} />
+                <Route path='animals/dogs'element={<DogPage isOpen={isOpen}/>} />
                 <Route path='animals/cats' element={<CatPage />} />
               </Route>
           </Routes>
