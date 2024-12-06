@@ -52,7 +52,12 @@ const DogPage = (isOpen) => {
                                     </button>
                                 </header>
                                 <section>
-                                    <img src={selectedAnimal.img} alt={selectedAnimal.name} />
+                                    <div className="imgContainer">
+                                        <img src={selectedAnimal.img} alt={selectedAnimal.name} />
+                                        <img src={selectedAnimal.img} alt={selectedAnimal.name} />
+                                        <img src={selectedAnimal.img} alt={selectedAnimal.name} />
+                                        <img src={selectedAnimal.img} alt={selectedAnimal.name} />
+                                    </div>
                                     <h3>{selectedAnimal.name}</h3>
                                     <h3>{selectedAnimal.gender}</h3>
                                     <h3>{selectedAnimal.age}</h3>
