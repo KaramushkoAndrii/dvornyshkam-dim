@@ -63,13 +63,13 @@
     background: $secondary;
 
     transition: right 0.3s ease-in-out;
-    z-index: 1000;
+    z-index: 999;
 
 
     
 
     img {
-        width: 80%;
+        width: 50dvw;
     }
 }
 
@@ -104,9 +104,14 @@
     }
 
     .imgContainer {
+        display: flex;
+        width: 100%;
         padding: 0 1rem;
+        gap: 1rem;
+
         overflow-x: scroll;
         scroll-behavior: smooth;
+        scrollbar-width: none;
     }
 
     div {

@@ -7,6 +7,11 @@ const Animals = [
         age: "5 років",
         gender: "хпопец",
         img: "/images/dogs/cesar.webp",
+        moreImg: [
+            "/images/dogs/cesar.webp",
+            "/images/dogs/sasha.webp",
+            "/images/dogs/patron.webp",
+        ],
         vaccine: true,
         animals: true
     },
@@ -16,6 +21,10 @@ const Animals = [
         age: "1 рік",
         gender: "дівчинка",
         img: "/images/dogs/sasha.webp",
+        moreImg: [
+            "/images/dogs/sasha.webp",
+            "/images/dogs/patron.webp",
+        ],
         vaccine: false,
         animals: true
     },
@@ -25,6 +34,10 @@ const Animals = [
         age: "3 роки",
         gender: "хпопец",
         img: "/images/dogs/patron.webp",
+        moreImg: [
+            "/images/dogs/sasha.webp",
+            "/images/dogs/patron.webp",
+        ],
         vaccine: true,
         animals: false
     },
@@ -34,6 +47,10 @@ const Animals = [
         age: "4 роки",
         gender: "хпопец",
         img: "/images/dogs/az.webp",
+        moreImg: [
+            "/images/dogs/sasha.webp",
+            "/images/dogs/patron.webp",
+        ],
         vaccine: false,
         animals: false
     },
@@ -43,6 +60,10 @@ const Animals = [
         age: "5 років",
         gender: "хпопец",
         img: "/images/dogs/cesar.webp",
+        moreImg: [
+            "/images/dogs/sasha.webp",
+            "/images/dogs/patron.webp",
+        ],
         vaccine: true,
         animals: true
     },
@@ -52,6 +73,10 @@ const Animals = [
         age: "1 рік",
         gender: "дівчинка",
         img: "/images/dogs/sasha.webp",
+        moreImg: [
+            "/images/dogs/sasha.webp",
+            "/images/dogs/patron.webp",
+        ],
         vaccine: false,
         animals: true
     },
@@ -61,6 +86,10 @@ const Animals = [
         age: "3 роки",
         gender: "хпопец",
         img: "/images/dogs/patron.webp",
+        moreImg: [
+            "/images/dogs/sasha.webp",
+            "/images/dogs/patron.webp",
+        ],
         vaccine: true,
         animals: false
     },
@@ -70,6 +99,10 @@ const Animals = [
         age: "4 роки",
         gender: "хпопец",
         img: "/images/dogs/az.webp",
+        moreImg: [
+            "/images/dogs/sasha.webp",
+            "/images/dogs/patron.webp",
+        ],
         vaccine: false,
         animals: false
     }

@@ -11,7 +11,7 @@ import Button from "../../components/button/Button";
 
 import './dogPage.scss';
 
-const DogPage = (isOpen) => {
+const DogPage = ({isOpen}) => {
 
     const [visibleCards, setVisibleCards] = useState(4);
     const [isLoading, setIsLoading] = useState(false);
@@ -52,12 +52,11 @@ const DogPage = (isOpen) => {
                                     </button>
                                 </header>
                                 <section>
-                                    <div className="imgContainer">
-                                        <img src={selectedAnimal.img} alt={selectedAnimal.name} />
-                                        <img src={selectedAnimal.img} alt={selectedAnimal.name} />
-                                        <img src={selectedAnimal.img} alt={selectedAnimal.name} />
-                                        <img src={selectedAnimal.img} alt={selectedAnimal.name} />
-                                    </div>
+                                    <ul className="imgContainer">
+                                        {selectedAnimal.moreImg.map((img, key) => (
+                                            <li key={key}><img src={img} alt={selectedAnimal.name} /></li>
+                                        ))}
+                                    </ul>
                                     <h3>{selectedAnimal.name}</h3>
                                     <h3>{selectedAnimal.gender}</h3>
                                     <h3>{selectedAnimal.age}</h3>
@@ -66,8 +65,8 @@ const DogPage = (isOpen) => {
                                         <i> <TbVaccine style={{fill: selectedAnimal.vaccine ? 'green' : 'red', stroke: selectedAnimal.vaccine ? 'green' : 'red'}}/> </i>
                                     </div>
                                     <footer>
-                                        <Button text={"hello"} />
-                                        <Button text={"hello2"} />
+                                        <Button text={t('buttons.house')} onClick={isOpen}/>
+                                        <Button text={t('buttons.guard')} onClick={isOpen}/>
                                     </footer>
                                 </section>
                             </div>
