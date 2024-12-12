@@ -2,10 +2,14 @@
 import { Suspense, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import AnimalList from './data/animalList';
+import AboutUsList from './data/aboutUsList';
+
 import Layout from './components/layout/Layout';
 import Modal from './components/modal/Modal';
 import HomePage from './pages/HomePage/HomePage';
 import AnimalsPage from './pages/AnimalsPage/AnimalsPage';
+import AboutUsPage from './pages/AboutUsPage/AboutUsPage';
 import DogPage from './pages/DogPage/DogPage';
 import CatPage from './pages/CatPage/CatPage';
 
@@ -31,9 +35,10 @@ function App() {
           <Routes>
               <Route path="/" element={<Layout />}>
                 <Route index element={<HomePage isOpen={isOpen}/>} />
-                <Route path='animals' element={<AnimalsPage />} />
+                <Route path='about' element={<AboutUsPage title={'navigation.about_us'} dataList={AboutUsList}/>} />
+                <Route path='animals' element={<AnimalsPage animalList={AnimalList}/>} />
                 <Route path='animals/dogs'element={<DogPage isOpen={isOpen}/>} />
-                <Route path='animals/cats' element={<CatPage />} />
+                <Route path='animals/cats' element={<CatPage isOpen={isOpen}/>} />
               </Route>
           </Routes>
         </Router>

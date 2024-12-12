@@ -1,0 +1,16 @@
+
+
+@import '../../style/var.scss';
+@import '../../style/mixins.scss';
+
+.aboutUs {
+    @include container();
+
+    p {
+        padding: calc($list-item-padding * 2) 0;
+    }
+
+    .aboutUs__item:last-child p {
+        padding-bottom: 0;
+    }
+}

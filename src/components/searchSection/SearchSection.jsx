@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import AnimalCard from '../AnimalCard/AnimalCard';
-import Animals from '../../data/animalsDB';
+import dogsDB from '../../data/dogsDB';
 import Button from '../button/Button';
 
 
@@ -18,9 +18,9 @@ const SearchSection = ({isOpen}) => {
     const [isAnimating, setIsAnimating] = useState(false);
 
     function getRandomAnimal() {
-        const randomAnimalIndex = Math.floor(Math.random() * Animals.length);
+        const randomAnimalIndex = Math.floor(Math.random() * dogsDB.length);
         
-        return Animals[randomAnimalIndex]
+        return dogsDB[randomAnimalIndex]
     }
 
     const animalRerol = () => {

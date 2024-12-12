@@ -1,5 +1,5 @@
 
-
+import './imgContainer.scss';
 
 const ImgContainer = ({src, alt}) => {
     return (

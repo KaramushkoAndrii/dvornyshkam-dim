@@ -1,6 +1,6 @@
 
 
-const Animals = [
+const dogsDB = [
     {
         id: 1,
         name: "Цезар",
@@ -108,4 +108,4 @@ const Animals = [
     }
 ]
 
-export default Animals;
+export default dogsDB;
