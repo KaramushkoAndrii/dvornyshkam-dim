@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 import AnimalCard from '../AnimalCard/AnimalCard';
 import dogsDB from '../../data/dogsDB';
@@ -48,7 +49,9 @@ const SearchSection = ({isOpen}) => {
 
             <div className='search__button-group'>
                 <Button text={t('buttons.rerol')} onClick={animalRerol} disabled={isAnimating}/>
-                <Button text={t('buttons.about')}></Button>
+                <Link to={'/about'}>
+                    <Button text={t('buttons.about')} />
+                </Link>
             </div>
         </section>
     )
