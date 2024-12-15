@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import AnimalList from './data/animalList';
 import AboutUsList from './data/aboutUsList';
+import AdviseAccordionData from './data/adviseAccordionData';
 
 import Layout from './components/layout/Layout';
 import Modal from './components/modal/Modal';
@@ -40,7 +41,11 @@ function App() {
                 <Route path='animals' element={<AnimalsPage animalList={AnimalList}/>} />
                     <Route path='animals/dogs'element={<DogPage isOpen={isOpen}/>} />
                     <Route path='animals/cats' element={<CatPage isOpen={isOpen}/>} />
-                <Route path='advise' element={<AdvisePage title={'advise-page.title'} isOpen={isOpen} />}/>
+                <Route path='advise' element={<AdvisePage title={'advise-page.title'} 
+                                                          isOpen={isOpen} 
+                                                          data={AdviseAccordionData}
+                                                          content={'advise-page.content'}
+                                                          btnText={'buttons.call'}/>}/>
               </Route>
           </Routes>
         </Router>

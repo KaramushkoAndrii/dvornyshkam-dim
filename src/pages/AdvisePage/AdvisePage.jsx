@@ -4,11 +4,11 @@ import { useTranslation } from "react-i18next";
 
 
 import Accordion from "../../components/accordion/Accordion";
-import AdviseAccordionData from "../../data/adviseAccordionData";
+import Button from "../../components/button/Button";
 
 import './advisePage.scss';
 
-const AdvisePage = ({isOpen, title}) => {
+const AdvisePage = ({isOpen, title, data, content, btnText}) => {
     
     const { t } = useTranslation();
     
@@ -17,8 +17,11 @@ const AdvisePage = ({isOpen, title}) => {
         <section className="advise__page">
             <h2 className="page__title">{t(title)}</h2>
 
+            <Accordion data={data}/>
 
-            <Accordion data={AdviseAccordionData}/>
+            <p className="advise__content">{t(content)}</p>
+
+            <Button text={t(btnText)} onClick={isOpen}/>
         </section>
     )
 }
