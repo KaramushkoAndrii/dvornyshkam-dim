@@ -12,6 +12,7 @@ import AnimalsPage from './pages/AnimalsPage/AnimalsPage';
 import AboutUsPage from './pages/AboutUsPage/AboutUsPage';
 import DogPage from './pages/DogPage/DogPage';
 import CatPage from './pages/CatPage/CatPage';
+import AdvisePage from './pages/AdvisePage/AdvisePage';
 
 import './index.scss'
 
@@ -37,8 +38,9 @@ function App() {
                 <Route index element={<HomePage isOpen={isOpen}/>} />
                 <Route path='about' element={<AboutUsPage title={'navigation.about_us'} dataList={AboutUsList}/>} />
                 <Route path='animals' element={<AnimalsPage animalList={AnimalList}/>} />
-                <Route path='animals/dogs'element={<DogPage isOpen={isOpen}/>} />
-                <Route path='animals/cats' element={<CatPage isOpen={isOpen}/>} />
+                    <Route path='animals/dogs'element={<DogPage isOpen={isOpen}/>} />
+                    <Route path='animals/cats' element={<CatPage isOpen={isOpen}/>} />
+                <Route path='advise' element={<AdvisePage title={'advise-page.title'} isOpen={isOpen} />}/>
               </Route>
           </Routes>
         </Router>

@@ -1,0 +1,8 @@
+
+
+@import '../../style//var.scss';
+@import '../../style/mixins.scss';
+
+.advise__page {
+    @include container();
+}
