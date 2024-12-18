@@ -1,0 +1,17 @@
+@import '../../style/var.scss';
+@import '../../style/mixins.scss';
+
+
+
+.contactForm {
+    padding: 1.5rem 0;
+    border-radius: $main-border-radius;
+
+    background-color: $primary;
+
+    .contactForm__item {
+        svg {
+            fill: $secondary;
+        }
+    }
+}

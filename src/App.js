@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AnimalList from './data/animalList';
 import AboutUsList from './data/aboutUsList';
 import AdviseAccordionData from './data/adviseAccordionData';
+import contactPageData from './data/contactPageData';
+import { ContactsSocial } from './data/contactsList';
 
 import Layout from './components/layout/Layout';
 import Modal from './components/modal/Modal';
@@ -14,6 +16,7 @@ import AboutUsPage from './pages/AboutUsPage/AboutUsPage';
 import DogPage from './pages/DogPage/DogPage';
 import CatPage from './pages/CatPage/CatPage';
 import AdvisePage from './pages/AdvisePage/AdvisePage';
+import ContactPage from './pages/ContactPage/ContactPage';
 
 import './index.scss'
 
@@ -46,6 +49,7 @@ function App() {
                                                           data={AdviseAccordionData}
                                                           content={'advise-page.content'}
                                                           btnText={'buttons.call'}/>}/>
+                <Route path='contacts' element={<ContactPage data={contactPageData} social={ContactsSocial}/>}/>
               </Route>
           </Routes>
         </Router>

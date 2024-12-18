@@ -1,0 +1,22 @@
+
+
+@import '../../style/var.scss';
+@import '../../style/mixins.scss';
+
+.contact__page {
+    @include container();
+
+    .contact__adres, .contact__social {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact__adres {
+        margin-bottom: 1.5rem;
+    } 
+
+    svg {
+        fill: $primary;
+    }
+}

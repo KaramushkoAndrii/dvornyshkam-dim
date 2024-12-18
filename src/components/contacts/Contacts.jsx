@@ -1,6 +1,8 @@
 
 import { ContactsLinks, ContactsSocial } from '../../data/contactsList';
 
+import SocialList from './SocialList';
+
 import './contacts.scss';
 
 
@@ -15,13 +17,8 @@ const Contacts = () => {
                     <a target='__blank' href={`tel:${ContactsLinks[1]}`}>{ContactsLinks[1]}</a>
                 </li>
             </ul>
-            <ul className='contacts__social'>
-                {ContactsSocial.map((item, key) => (
-                    <li key={key} className='contacts__social-item'>
-                        <a target='__blank' href={item.href}>{item.icon}</a>
-                    </li>
-                ))}
-            </ul>
+
+            <SocialList data={ContactsSocial} />
         </div>
     )
 }
