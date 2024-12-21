@@ -49,7 +49,9 @@ function App() {
                                                           data={AdviseAccordionData}
                                                           content={'advise-page.content'}
                                                           btnText={'buttons.call'}/>}/>
-                <Route path='contacts' element={<ContactPage data={contactPageData} social={ContactsSocial}/>}/>
+                <Route path='contacts' element={<ContactPage data={contactPageData}
+                                                             social={ContactsSocial}
+                                                             isOpen={isOpen}/>}/>
               </Route>
           </Routes>
         </Router>

@@ -4,14 +4,16 @@ import { useTranslation } from 'react-i18next';
 
 import SocialList from '../../components/contacts/SocialList';
 import ContactForm from '../../components/contactForm/ContactForm';
+import VisitedUs from '../../components/visitedUs/VisitedUs';
 import ContactFormData from '../../data/contactFormData';
+import VisitedUsDate from '../../data/visitedUsDate';
 
 import './contactPage.scss';
 
 
-const ContactPage = ({data, social}) => {
+const ContactPage = ({data, social, isOpen}) => {
 
-    const {title, header, headerContent, socialHeader} = data;
+    const {title, header, headerContent, socialHeader, responseble, sterilaz, tomuch, slogan} = data;
     const { t } = useTranslation();
 
     return (
@@ -27,7 +29,17 @@ const ContactPage = ({data, social}) => {
                 <SocialList data={social} />
             </div>
 
-            <ContactForm data={ContactFormData}/>
+            <ContactForm data={ContactFormData} isOpen={isOpen}/>
+
+            <div className="contact__info">
+                <h2 className="contact__info--header">{t(responseble)}<i>{t(sterilaz)}</i></h2>
+                <p className="contact__info--content">{t(tomuch)}</p>
+                <p className="contact__info--content">{t(slogan)}</p>
+            </div>
+
+
+            <VisitedUs data={VisitedUsDate} />
+
         </section>
     )
 }

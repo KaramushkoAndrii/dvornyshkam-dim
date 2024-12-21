@@ -6,7 +6,7 @@ import {ReactComponent as TelegramIcon} from '../../images/telegram.svg';
 import Button from '../button/Button';
 import './contactForm.scss';
 
-const ContactForm = ({data}) => {
+const ContactForm = ({data, isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -23,7 +23,7 @@ const ContactForm = ({data}) => {
                         <a href={`mailto:${item.link}`}>{item.link}</a>}
                 </li>
             ))}
-            <Button text={t('buttons.contact')} />
+            <Button text={t('buttons.contact')} onClick={isOpen}/>
         </ul>
     )
 }

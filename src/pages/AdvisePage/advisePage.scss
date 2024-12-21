@@ -7,8 +7,10 @@
     @include container();
     padding-bottom: 0;
 
+    .advise__content { margin: 2rem 0; }
+
     .mainButton {
-        margin: 2rem auto 0;
+        margin: 0 auto;
         display: flex;
         background-color: $primary;
     }

@@ -1,0 +1,14 @@
+@import '../../style/var.scss';
+@import '../../style/mixins.scss';
+
+
+.visitedUs {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: $primary;
+    border-radius: $main-border-radius;
+
+    h2 {
+        padding-bottom: 1.5rem;
+    }
+}
