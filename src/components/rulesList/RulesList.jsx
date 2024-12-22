@@ -4,7 +4,7 @@ import Accordion from '../accordion/Accordion';
 
 import './rulesList.scss';
 
-const RulesList = ({data, accordionData}) => {
+const RulesList = ({data, accordionData = null}) => {
 
     const { t } = useTranslation();
 
@@ -15,7 +15,9 @@ const RulesList = ({data, accordionData}) => {
             <h2>{t(title)}</h2>
             <p>{t(description)}</p>
 
-            <Accordion data={accordionData}/>
+
+            {accordionData ? <Accordion data={accordionData}/> : null}
+            
         </div>
     )
 }

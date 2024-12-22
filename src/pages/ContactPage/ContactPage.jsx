@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import SocialList from '../../components/contacts/SocialList';
 import ContactForm from '../../components/contactForm/ContactForm';
 import VisitedUs from '../../components/visitedUs/VisitedUs';
+import Map from '../../components/map/Map';
 import ContactFormData from '../../data/contactFormData';
 import VisitedUsDate from '../../data/visitedUsDate';
 
@@ -40,6 +41,7 @@ const ContactPage = ({data, social, isOpen}) => {
 
             <VisitedUs data={VisitedUsDate} />
 
+            <Map data={''}/>
         </section>
     )
 }
