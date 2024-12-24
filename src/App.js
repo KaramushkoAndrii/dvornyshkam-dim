@@ -6,6 +6,7 @@ import AnimalList from './data/animalList';
 import AboutUsList from './data/aboutUsList';
 import AdviseAccordionData from './data/adviseAccordionData';
 import contactPageData from './data/contactPageData';
+import HelpPageData from './data/helpPageData';
 import { ContactsSocial } from './data/contactsList';
 
 import Layout from './components/layout/Layout';
@@ -16,6 +17,7 @@ import AboutUsPage from './pages/AboutUsPage/AboutUsPage';
 import DogPage from './pages/DogPage/DogPage';
 import CatPage from './pages/CatPage/CatPage';
 import AdvisePage from './pages/AdvisePage/AdvisePage';
+import HelpPage from './pages/HelpPage/HelpPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 
 import './index.scss'
@@ -49,6 +51,7 @@ function App() {
                                                           data={AdviseAccordionData}
                                                           content={'advise-page.content'}
                                                           btnText={'buttons.call'}/>}/>
+                <Route path='help' element={<HelpPage data={HelpPageData}/>} />
                 <Route path='contacts' element={<ContactPage data={contactPageData}
                                                              social={ContactsSocial}
                                                              isOpen={isOpen}/>}/>

@@ -6,7 +6,7 @@ import { FaPaw } from "react-icons/fa";
 
 import './helpSection.scss';
 
-const HelpSection = () => {
+const HelpSection = ({list, btnText}) => {
 
     const { t } = useTranslation();
 
@@ -23,7 +23,9 @@ const HelpSection = () => {
                         </li>
                     ))}
                 </ul>
-                <Button text={t('buttons.more')}/>
+
+                {btnText ? <Button text={t(btnText)}/> : null}
+                
             </div>
         </section>
     )

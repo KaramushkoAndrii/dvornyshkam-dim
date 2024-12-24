@@ -16,7 +16,7 @@ const HomePage = ({isOpen}) => {
             <SearchSection isOpen={isOpen}/>
             <AboutSection />
             <OurAnimals isOpen={isOpen}/>
-            <HelpSection />
+            <HelpSection btnText={'buttons.more'}/>
         </>
     )
 }
