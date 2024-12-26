@@ -15,8 +15,10 @@ const HelpPage = ({data, isOpen}) => {
 
     return (
         <section className='help__page'>
-            <h2>{t(title)}</h2>
-            <p>{t(description)}</p>
+            <header className='help__header'>
+                <h2>{t(title)}</h2>
+                <p>{t(description)}</p>
+            </header>
             <HelpSection />
 
             <ul className='help__detailed'>

@@ -6,29 +6,38 @@
 
     display: flex;
     flex-direction: column;
+
     gap: 0.75rem;
     padding: 1rem;
-    background-color: $purple;
+
     border-radius: $main-border-radius;
 
+    background-color: $purple;
+
     footer {
-        background-color: $purple;
+        display: flex;
+        flex-direction: column;
+
+        gap: 0.75rem;
         padding: 0;
         margin: 0;
         max-width: auto;
+
         border-radius: none;
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
+
+        background-color: $purple;
     }
 
     button, a {
         display: flex;
         justify-content: center;
-        background-color: transparent;
-        border: 1px solid $secondary;
-        border-radius: $main-border-radius;
+
         padding: 0.5rem 4rem;
         max-width: max-content;
+
+        border: 1px solid $secondary;
+        border-radius: $main-border-radius;
+
+        background-color: transparent;
     }
 }

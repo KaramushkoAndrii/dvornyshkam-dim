@@ -1,12 +1,13 @@
 
 import { useTranslation } from 'react-i18next';
+
 import HelpList from '../../data/helpList';
 import Button from '../button/Button';
 import { FaPaw } from "react-icons/fa";
 
 import './helpSection.scss';
 
-const HelpSection = ({list, btnText}) => {
+const HelpSection = ({btnText}) => {
 
     const { t } = useTranslation();
 

@@ -6,6 +6,13 @@
 .help__page {
     @include container();
     padding-bottom: 0;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        gap: 1.5rem;
+    }
 }
 
 .help__detailed {
