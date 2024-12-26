@@ -7,7 +7,7 @@ import HelpListDetailedData from '../../data/helpListDetailedData';
 import './helpPage.scss';
 
 
-const HelpPage = ({data}) => {
+const HelpPage = ({data, isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -19,8 +19,8 @@ const HelpPage = ({data}) => {
             <p>{t(description)}</p>
             <HelpSection />
 
-            <ul>
-                <HelpListDetailed dataList={HelpListDetailedData} translationGroup={"help-list-detailed"} />
+            <ul className='help__detailed'>
+                <HelpListDetailed dataList={HelpListDetailedData} translationGroup={"help-list-detailed"} isOpen={isOpen}/>
             </ul>
         </section>
     )

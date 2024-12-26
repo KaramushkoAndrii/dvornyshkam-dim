@@ -1,0 +1,15 @@
+
+
+@import '../../style/var.scss';
+@import '../../style/mixins.scss';
+
+.help__page {
+    @include container();
+    padding-bottom: 0;
+}
+
+.help__detailed {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
