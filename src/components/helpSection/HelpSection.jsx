@@ -1,6 +1,8 @@
 
 import { useTranslation } from 'react-i18next';
 
+import { Link } from 'react-router-dom';
+
 import HelpList from '../../data/helpList';
 import Button from '../button/Button';
 import { FaPaw } from "react-icons/fa";
@@ -25,7 +27,7 @@ const HelpSection = ({btnText}) => {
                     ))}
                 </ul>
 
-                {btnText ? <Button text={t(btnText)}/> : null}
+                {btnText ? <Link to={'/help'}><Button text={t(btnText)}/></Link> : null}
                 
             </div>
         </section>
