@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import AllAnimalsList from '../allAnimalsList/AllAnimalsList';
@@ -17,6 +17,9 @@ const AnimalsPage = ({title, data = [], animal, isOpen}) => {
     const [visibleCards, setVisibleCards] = useState(4);
     const [isLoading, setIsLoading] = useState(false);
     const [selectedAnimal, setSelectedAnimal] = useState(null);
+
+
+    const list = useMemo(() => data.slice(0, visibleCards), [data, visibleCards]);
     // const [filters, setFilters] = useState({
     //     vacine: null,
     //     animals: null,
@@ -65,17 +68,14 @@ const AnimalsPage = ({title, data = [], animal, isOpen}) => {
 
 
     const loadMoreAnimals = async () => {
-        setIsLoading(true);
-        await new Promise((resolve) => setTimeout(resolve, 1000));
         setVisibleCards((prev) => prev + 4);
-        setIsLoading(false);
         console.log('load')
     }
 
-    const handleAnimalSelect = (animal) => {
+    const handleAnimalSelect = useCallback((animal) => {
         setSelectedAnimal(animal)
         console.log('selected')
-    }
+    }, [])
 
     const handleCloseAside = () => {
         setSelectedAnimal(null)
@@ -86,9 +86,9 @@ const AnimalsPage = ({title, data = [], animal, isOpen}) => {
     //     setFilters(newFilters);
     // }
 
-    useEffect(() => {
+    // useEffect(() => {
 
-    }, [data, visibleCards])
+    // }, [data, visibleCards])
 
     return (
         <>
@@ -98,7 +98,7 @@ const AnimalsPage = ({title, data = [], animal, isOpen}) => {
 
             <section className="animalPage__content">
                 <AllAnimalsList 
-                    list={data.slice(0, visibleCards)} 
+                    list={list} 
                     onAnimalSelect={handleAnimalSelect}
                 />
                 <aside className={`animalPage__aside ${selectedAnimal ? 'open' : ''}`}>
@@ -112,8 +112,8 @@ const AnimalsPage = ({title, data = [], animal, isOpen}) => {
                             </header>
                             <section>
                                 <ul className="imgContainer">
-                                    {selectedAnimal.moreImg.map((img) => (
-                                        <li key={selectedAnimal.id}><img src={img} alt={selectedAnimal.name} /></li>
+                                    {selectedAnimal.moreImg.map((img, indx) => (
+                                        <li key={indx}><img src={img} alt={selectedAnimal.name} /></li>
                                     ))}
                                 </ul>
                                 <h3>{selectedAnimal.name}</h3>
@@ -135,7 +135,7 @@ const AnimalsPage = ({title, data = [], animal, isOpen}) => {
 
             {visibleCards < data.length && (
                 <button className="animalPage__more" onClick={loadMoreAnimals}>
-                    {isLoading ? t('buttons.loading') : t(`buttons.${animal}`)}
+                    {t(`buttons.${animal}`)}
                 </button>
             )}
         </>

@@ -1,4 +1,4 @@
-
+import { memo } from "react";
 
 import AnimalCard from "../AnimalCard/AnimalCard";
 
@@ -23,4 +23,4 @@ const AllAnimalsList = ({list, onAnimalSelect}) => {
     )
 }
 
-export default AllAnimalsList;
+export default memo(AllAnimalsList);
