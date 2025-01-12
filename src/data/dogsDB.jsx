@@ -2,7 +2,7 @@
 
 const dogsDB = [
     {
-        id: 1,
+        id: 'cesar',
         name: "Цезар",
         age: "5 років",
         gender: "хпопец",
@@ -16,7 +16,7 @@ const dogsDB = [
         animals: true
     },
     {
-        id: 2,
+        id: 'foxi',
         name: "Фоксі",
         age: "1 рік",
         gender: "дівчинка",
@@ -29,7 +29,7 @@ const dogsDB = [
         animals: true
     },
     {
-        id: 3,
+        id: 'patron',
         name: "Патрон",
         age: "3 роки",
         gender: "хпопец",
@@ -42,7 +42,7 @@ const dogsDB = [
         animals: false
     },
     {
-        id: 4,
+        id: 'az',
         name: "Азазело",
         age: "4 роки",
         gender: "хпопец",
@@ -55,7 +55,7 @@ const dogsDB = [
         animals: false
     },
     {
-        id: 1,
+        id: 'cesar2',
         name: "Цезар",
         age: "5 років",
         gender: "хпопец",
@@ -68,7 +68,7 @@ const dogsDB = [
         animals: true
     },
     {
-        id: 2,
+        id: 'foxi2',
         name: "Фоксі",
         age: "1 рік",
         gender: "дівчинка",
@@ -81,7 +81,7 @@ const dogsDB = [
         animals: true
     },
     {
-        id: 3,
+        id: 'patron2',
         name: "Патрон",
         age: "3 роки",
         gender: "хпопец",
@@ -94,7 +94,7 @@ const dogsDB = [
         animals: false
     },
     {
-        id: 4,
+        id: 'az2',
         name: "Азазело",
         age: "4 роки",
         gender: "хпопец",
