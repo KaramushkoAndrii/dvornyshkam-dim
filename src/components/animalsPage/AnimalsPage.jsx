@@ -15,90 +15,86 @@ const AnimalsPage = ({title, data = [], animal, isOpen}) => {
     const { t } = useTranslation();
 
     const [visibleCards, setVisibleCards] = useState(4);
-    const [isLoading, setIsLoading] = useState(false);
     const [selectedAnimal, setSelectedAnimal] = useState(null);
+    const [filters, setFilters] = useState({
+        age: '',
+        size: '',
+        gender: '',
+        vaccine: false
+    });
+
+    const filteredData = useMemo(() => {
+        return data
+            .filter((animal) => {
+                if(filters.age) {
+                    const age = parseInt(animal.age, 10);
+                    switch(filters.age) {
+                        case '0-1': return age <=1;
+                        case '1-3': return age >1 && age <=3;
+                        case '4-6': return age >3 && age <=6;
+                        case '7+': return age >= 7;
+                        default: return true
+                    }
+                }
+
+                return true;
+            })
+
+            .filter((animal) => {
+                if(filters.size) {
+                    const weight = parseInt(animal.size, 10);
+                    switch(filters.size) {
+                        case '0-15': return weight <= 15;
+                        case '15-25': return weight > 15 && weight <=25;
+                        case '25': return weight > 25;
+                        default: return true
+                    }
+                }
+
+                return true;
+            })
+
+            .filter((animal) => {
+                return !filters.gender || animal.gender === filters.gender;
+            })
+
+            .filter((animal) => {
+                return !filters.vaccine || animal.vaccine === filters.vaccine;
+            });
+    }, [data, filters]);
+
+    const visibleData = useMemo(() => filteredData.slice(0, visibleCards), [filteredData, visibleCards]);
 
 
-    const list = useMemo(() => data.slice(0, visibleCards), [data, visibleCards]);
-    // const [filters, setFilters] = useState({
-    //     vacine: null,
-    //     animals: null,
-    //     gender: '',
-    //     ageRange: ''
-    // })
-
-    // //Функция для преобразования возраста из строки в число
-    // const parseAge = (age) => parseInt(age.replace(/\D+/g, ''), 10);
-
-    // const filteredData = data.filter((animal) => {
-    //     const vacineMatch = filters.vacine === null || animal.vacine === filters.vacine;
-    //     const animalsMatch = filters.animals === null || animal.animals === filters.animals;
-    //     const genderMatch = !filters.gender || animal.gender === filters.gender;
-
-    //     const age = parseAge(animal.age);
-    //     let ageMatch = true;
-    //     switch (filters.ageRange) {
-    //         case '0-1':
-    //             ageMatch = age <= 1;
-    //             break;
-            
-    //         case '1-3':
-    //             ageMatch = age >= 1 && age <= 3;
-    //             break;
-            
-    //         case '3-5':
-    //             ageMatch = age >= 3 && age <= 5;
-    //             break;
-    
-    //         case '5-10':
-    //             ageMatch = age >= 5 && age <= 10;
-    //             break;
-    
-    //         case '10+':
-    //             ageMatch = age > 10;
-    //             break;
-            
-    //         default:
-    //             ageMatch = true;
-    //     }
-    
-    //     return vacineMatch && animalsMatch && genderMatch && ageMatch;
-    // })
+    // const list = useMemo(() => data.slice(0, visibleCards), [data, visibleCards]);
 
 
-
-    const loadMoreAnimals = async () => {
+    const loadMoreAnimals = () => {
         setVisibleCards((prev) => prev + 4);
-        console.log('load')
     }
 
     const handleAnimalSelect = useCallback((animal) => {
         setSelectedAnimal(animal)
-        console.log('selected')
     }, [])
 
     const handleCloseAside = () => {
         setSelectedAnimal(null)
-        console.log('close')
     }
 
-    // const handleFilterChange = (newFilters) => {
-    //     setFilters(newFilters);
-    // }
-
-    // useEffect(() => {
-
-    // }, [data, visibleCards])
+    const handleFilterChange = (newFilters) => {
+        setFilters(newFilters);
+        setVisibleCards(4);
+    };
 
     return (
         <>
             <h2>{t(`${title}`)}</h2>
 
-            {/* <SearchFilter onFilterChange={handleFilterChange} /> */}
+            <SearchFilter onFilterChange={handleFilterChange}/>
 
             <section className="animalPage__content">
                 <AllAnimalsList 
-                    list={list} 
+                    list={visibleData} 
                     onAnimalSelect={handleAnimalSelect}
                 />
                 <aside className={`animalPage__aside ${selectedAnimal ? 'open' : ''}`}>
