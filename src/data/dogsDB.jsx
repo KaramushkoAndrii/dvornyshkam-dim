@@ -7,6 +7,8 @@ const dogsDB = [
         age: "5 років",
         gender: "хпопец",
         img: "/images/dogs/cesar.webp",
+        size: "14",
+        // gender: "male",
         moreImg: [
             "/images/dogs/cesar.webp",
             "/images/dogs/sasha.webp",
@@ -21,6 +23,7 @@ const dogsDB = [
         age: "1 рік",
         gender: "дівчинка",
         img: "/images/dogs/sasha.webp",
+        size: "24",
         moreImg: [
             "/images/dogs/sasha.webp",
             "/images/dogs/patron.webp",
@@ -34,6 +37,7 @@ const dogsDB = [
         age: "3 роки",
         gender: "хпопец",
         img: "/images/dogs/patron.webp",
+        size: "30",
         moreImg: [
             "/images/dogs/sasha.webp",
             "/images/dogs/patron.webp",
@@ -47,6 +51,7 @@ const dogsDB = [
         age: "4 роки",
         gender: "хпопец",
         img: "/images/dogs/az.webp",
+        size: "35",
         moreImg: [
             "/images/dogs/sasha.webp",
             "/images/dogs/patron.webp",
@@ -60,6 +65,7 @@ const dogsDB = [
         age: "5 років",
         gender: "хпопец",
         img: "/images/dogs/cesar.webp",
+        size: "14",
         moreImg: [
             "/images/dogs/sasha.webp",
             "/images/dogs/patron.webp",
@@ -73,6 +79,7 @@ const dogsDB = [
         age: "1 рік",
         gender: "дівчинка",
         img: "/images/dogs/sasha.webp",
+        size: "24",
         moreImg: [
             "/images/dogs/sasha.webp",
             "/images/dogs/patron.webp",
@@ -86,6 +93,7 @@ const dogsDB = [
         age: "3 роки",
         gender: "хпопец",
         img: "/images/dogs/patron.webp",
+        size: "30",
         moreImg: [
             "/images/dogs/sasha.webp",
             "/images/dogs/patron.webp",
@@ -99,6 +107,7 @@ const dogsDB = [
         age: "4 роки",
         gender: "хпопец",
         img: "/images/dogs/az.webp",
+        size: "35",
         moreImg: [
             "/images/dogs/sasha.webp",
             "/images/dogs/patron.webp",
