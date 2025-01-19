@@ -3,57 +3,6 @@
 @import '../../style/var.scss';
 @import '../../style/mixins.scss';
 
-// .animal {
-//     width: 100%; // Растягивается на всю ширину родителя
-//     max-width: 250px; // Максимальная ширина
-//     min-width: 200px; // Минимальная ширина (опционально)
-
-//     padding: 1rem;
-//     box-sizing: border-box; // Включает padding в общую ширину
-
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-
-//     background-color: $primary;
-//     border-radius: 2rem;
-
-//     .animal__picture {
-//         width: 100%;
-//         max-height: 200px; // Контролируем высоту картинки
-//         overflow: hidden; // Обрезает содержимое, если выходит за пределы
-//     }
-    
-//     img {
-//         width: 100%;
-//         height: auto;
-//         border-radius: 2rem 2rem 1rem 1rem;
-//         object-fit: cover;
-//     }
-
-    
-//     .animal__name {
-//         font-size: clamp(1rem, 3vw, 2rem); // Уменьшает текст на маленьких экранах
-//     }
-    
-//     .animal__gender, .animal__age {
-//         font-size: clamp(0.7rem, 2vw, 1.5rem);
-//     }
-    
-//     .animal__buttons {
-//         gap: 0.3rem; // Уменьшаем расстояние между кнопками
-//     }
-    
-//     .animal__choice {
-//         padding: 0.5rem 0.75rem; // Уменьшаем кнопки
-//         font-size: clamp(0.7rem, 2vw, 1rem);
-//     }
-    
-// }
-
-
-
 .animal {
     display: flex;
     flex-direction: column;
@@ -86,7 +35,7 @@
         align-items: center;
         flex-wrap: wrap;
 
-        padding: 1rem 0;
+        padding: 0.5rem 0;
     }
 
     .animal__name {

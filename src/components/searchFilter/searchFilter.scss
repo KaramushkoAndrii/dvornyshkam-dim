@@ -4,6 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    max-width: 630px;
     gap: 1rem;
     label:not(:last-of-type) {
         display: flex;
