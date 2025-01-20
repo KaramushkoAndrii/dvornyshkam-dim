@@ -12,7 +12,7 @@ const FigureContainer = ({src, alt, text}) => {
         <figure className='figure-container'>
             <img src={src} alt={alt} />
             <figcaption>{t(`${text}`)}</figcaption>
-    </figure>
+        </figure>
     )
 }
 

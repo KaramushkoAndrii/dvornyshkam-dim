@@ -42,6 +42,20 @@
             animation: rotate 1s ease-in-out;
         }
     }
+
+
+    @media (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+
+        .search__title {
+            flex-grow: 1;
+        }
+
+        .card-container {
+            width: 50%;
+        }
+    }
 }
 
 @keyframes rotate {

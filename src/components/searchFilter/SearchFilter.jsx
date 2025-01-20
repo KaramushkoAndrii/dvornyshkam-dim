@@ -33,6 +33,12 @@ const SearchFilter = ({onFilterChange}) => {
         {label: 'От 25кг (Большой)', value: '25'}
     ]
 
+    const genderSelect = [
+        {label: 'Выберите пол', value: ''},
+        {label: 'Мальчик', value: 'male'},
+        {label: 'Девочка', value: 'female'}
+    ]
+
 
     return (
         <div className="filter">
@@ -43,13 +49,6 @@ const SearchFilter = ({onFilterChange}) => {
                     value={ageSelect.find(option => option.value === filters.age)}
                     onChange={(option) => handleChange('age', option.value)}
                 />
-                {/* <select value={filters.age} onChange={(e) => handleChange('age', e.target.value)}>
-                    <option value=''>Выберите возраст</option>
-                    <option value='0-1'> До 1 года</option>
-                    <option value='1-3'> 1 - 3 года</option>
-                    <option value='4-6'> 4 - 6 лет</option>
-                    <option value='7+'> От 7 лет</option>
-                </select> */}
             </label>
             <label>
                 Размер:
@@ -58,20 +57,19 @@ const SearchFilter = ({onFilterChange}) => {
                     value={sizeSelect.find(option => option.value === filters.size)}
                     onChange={(option => handleChange('size', option.value))}
                 />
-                {/* <select value={filters.size} onChange={(e) => handleChange('size', e.target.value)}>
-                    <option value=''>Выберите размер</option>
-                    <option value='0-15'> До 15 кг (маленький)</option>
-                    <option value='15-25'> 15 - 25кг (Средний)</option>
-                    <option value='25'> От 25кг (Большой)</option>
-                </select> */}
             </label>
             <label>
                 Пол:
-                <select value={filters.gender} onChange={(e) => handleChange('gender', e.target.value)}>
+                <Select
+                    options={genderSelect}
+                    value={genderSelect.find(option => option.value === filters.gender)}
+                    onChange={(option => handleChange('gender', option.value))}
+                />
+                {/* <select value={filters.gender} onChange={(e) => handleChange('gender', e.target.value)}>
                     <option value=''>Выберите пол</option>
                     <option value='male'> Мальчик</option>
                     <option value='female'> Девочка</option>
-                </select>
+                </select> */}
             </label>
             <label>
                 привитые

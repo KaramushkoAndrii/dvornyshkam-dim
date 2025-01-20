@@ -7,15 +7,14 @@ const AboutList = [
     },
 
     {
-        title: "recovery",
-        content: "recovery-description"
+        title: "family",
+        content: "family-description"
     },
 
     {
-        title: "family",
-        content: "family-description"
+        title: "recovery",
+        content: "recovery-description"
     }
-
 ]
 
 
