@@ -14,7 +14,6 @@
     }
 
     &__title {
-        font-size: clamp(2rem, 8vw, 15rem);
         padding-bottom: 1.5rem;
 
         text-align: center;
@@ -54,6 +53,10 @@
 
         .card-container {
             width: 50%;
+        }
+
+        .mainButton {
+            width: 100%;
         }
     }
 }
