@@ -13,9 +13,9 @@
         display: grid;
         gap: 2rem;
 
-        P {
-            font-size: clamp(1.5rem, 4.5vw, 5rem);
-        }
+        // P {
+        //     font-size: clamp(1.5rem, 4.5vw, 5rem);
+        // }
         
         ul {
             display: grid;
@@ -29,7 +29,7 @@
 
         span {
             padding-left: 2rem;
-            font-size: clamp(1.25rem, 3.75vw, 4rem);
+            // font-size: clamp(1.25rem, 3.75vw, 4rem);
         }
 
         button {

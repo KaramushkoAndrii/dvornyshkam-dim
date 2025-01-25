@@ -30,7 +30,6 @@
 
     &__title {
         text-align: center;
-        font-size: clamp(1.2rem, 4vw, 2rem);
     }
 
     &__option {
@@ -74,5 +73,11 @@
 
     img {
         width: 100%;
+    }
+
+    @media (min-width: $tablet) {
+        &::before {
+            bottom: calc(100% - 2.8rem);
+        }
     }
 }

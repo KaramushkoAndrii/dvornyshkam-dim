@@ -36,6 +36,8 @@
         align-items: center;
         flex-wrap: wrap;
 
+        height: fit-content;
+
         padding: 0.5rem 0;
     }
 
@@ -44,18 +46,16 @@
         padding-bottom: 0.25rem;
 
         text-align: center;
-
-        font-size: clamp(1.5rem, 4vw, 3rem);
     }
 
     .animal__gender, .animal__age {
-        font-size: clamp(0.8rem, 3vw, 5rem);
+        width: 100%;
+        text-align: center;
     }
 
     .animal__characteristics {
         display: none;
         gap: 1rem;
-        padding-bottom: 1.5rem;
 
         svg {
             width: 2rem;
@@ -73,17 +73,27 @@
     }
 
     .animal__choice {
-        padding: 0.75rem 1rem;
+        padding: 1rem 1.5rem;
         border-radius: 1rem;
-
-        font-size: clamp(0.8rem, 3vw, 5rem);
 
         color: $white;
         background-color: $secondary;
     }
 
+}
 
-    @media (min-width: $tablet) {
-        
+@media (min-width: $large) {
+    .animal {
+        gap: 2rem;
+    }
+
+    .search .animal__characteristics {
+        display: flex;
+    }
+
+    .search .animal__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

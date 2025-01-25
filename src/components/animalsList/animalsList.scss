@@ -4,8 +4,6 @@
 
 .animals__title {
     padding: 0 2rem;
-
-    // font-size: clamp(2rem, 8vw, 8rem)
 }
 
 .animals__list {
@@ -38,5 +36,12 @@
     button {
         border: 1px solid $secondary;
         background-color: $primary;
+    }
+}
+
+@media (min-width: $large) {
+    .animals__list {
+        justify-content: center;
+        scrollbar-width: none;
     }
 }

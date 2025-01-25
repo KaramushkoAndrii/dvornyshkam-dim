@@ -36,7 +36,6 @@
     }
 
     .card-container {
-
         &.rotate {
             animation: rotate 1s ease-in-out;
         }
@@ -48,7 +47,7 @@
         flex-wrap: wrap;
 
         .search__title {
-            flex-grow: 1;
+            width: 100%;
         }
 
         .card-container {
@@ -57,6 +56,22 @@
 
         .mainButton {
             width: 100%;
+        }
+    }
+
+    @media (min-width:$large) {
+        .card-container {
+            width: 33%;
+        }
+    }
+
+
+    @media (min-width: $large) {
+
+        justify-content: space-evenly;
+
+        .card-container {
+            margin: 0;
         }
     }
 }
