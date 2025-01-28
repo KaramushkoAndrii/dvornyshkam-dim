@@ -13,6 +13,12 @@
     padding: 0 $list-padding-x;
     gap: 2.5rem;
 
+    @media (min-width: $large) {
+        flex-direction: row;
+        gap: 1rem;
+        padding: 0;
+    }
+
 
     &__links {
         display: flex;
@@ -29,11 +35,15 @@
     &__social {
         display: flex;
         gap: 1.5rem;
+
+        @media (min-width: $large) {
+            gap: 0.5rem;
+        }
     }
 
     &__social-item {
-        width: 2rem;
-        height: 2rem;
+        width: clamp(1.5rem,1.5vw, 2rem);
+        height: clamp(1.5rem, 2vw, 2rem);
 
         svg {
             display: flex;

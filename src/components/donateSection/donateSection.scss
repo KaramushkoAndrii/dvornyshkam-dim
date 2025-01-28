@@ -14,7 +14,7 @@
     &::before {
         position: absolute;
         content: '';
-        bottom: calc(100% - 2.45rem);
+        bottom: calc(100% - 3.25rem);
         left: 0;
 
         width: 100%;
@@ -77,7 +77,7 @@
 
     @media (min-width: $tablet) {
         &::before {
-            bottom: calc(100% - 2.8rem);
+            bottom: calc(100% - 2.45rem);
         }
     }
 }

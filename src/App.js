@@ -8,6 +8,7 @@ import AdviseAccordionData from './data/adviseAccordionData';
 import contactPageData from './data/contactPageData';
 import HelpPageData from './data/helpPageData';
 import { ContactsSocial } from './data/contactsList';
+import CustomCursor from './components/customCursor/CustomCursor';
 
 import Layout from './components/layout/Layout';
 import Modal from './components/modal/Modal';
@@ -38,6 +39,7 @@ function App() {
 
   return (
     <div className="App">
+        <CustomCursor />
         <Router>
           <Routes>
               <Route path="/" element={<Layout />}>

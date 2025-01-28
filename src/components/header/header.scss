@@ -25,6 +25,11 @@
         aspect-ratio: 1;
 
         overflow: hidden;
+
+
+        @media (min-width: $large) {
+            order: -1;
+        }
     }
 
     .logo {

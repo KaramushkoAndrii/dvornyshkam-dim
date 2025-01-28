@@ -6,16 +6,13 @@
 .help {
     background-color: $primary;
     border-radius: $main-border-radius;
+    overflow: hidden;
 
     &__content {
         @include container($marginBottom: 2rem);
 
         display: grid;
         gap: 2rem;
-
-        // P {
-        //     font-size: clamp(1.5rem, 4.5vw, 5rem);
-        // }
         
         ul {
             display: grid;
@@ -29,7 +26,6 @@
 
         span {
             padding-left: 2rem;
-            // font-size: clamp(1.25rem, 3.75vw, 4rem);
         }
 
         button {

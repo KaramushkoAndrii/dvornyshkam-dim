@@ -18,6 +18,25 @@
     visibility: hidden;
     pointer-events: none;
 
+    @media (min-width: $large) {
+
+        position: relative;
+        top: 0;
+        left: 0;
+
+        padding: 0 1rem;
+
+        display: flex;
+        gap: 0;
+
+        height: auto;
+
+        opacity: 1;
+        visibility: visible;
+
+        pointer-events: all;
+    }
+
     &.open {
         display: flex;
         flex-direction: column;
@@ -37,6 +56,14 @@
         gap: $list-item-padding;
         padding: 0 $list-padding-x;
         width: 100%;
+
+
+        @media (min-width: $large) {
+            flex-direction: row;
+            align-items: center;
+
+            padding: 0;
+        }
     }
 
 
@@ -62,6 +89,24 @@
             width: 1.5rem;
             height: 1.5rem;
         }
+
+        @media (min-width: $large) {
+
+            border: none;
+
+            span {
+                white-space: nowrap;
+                font-size: clamp(1rem, 1.5vw, 2rem);
+            }
+
+            a {
+                padding: 0.5rem calc($list-padding-x - 3rem);
+            }
+
+            svg {
+                display: none;
+            }
+        }
     }
 }
 
@@ -77,6 +122,10 @@
 
     gap: 0.5rem;
 
+
+    @media (min-width: $large) {
+        display: none;
+    }
 }
 
 .burger__bar {

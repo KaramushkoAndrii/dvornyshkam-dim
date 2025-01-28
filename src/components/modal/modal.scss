@@ -45,7 +45,7 @@
     left: 50%;
 
     width: 90dvw;
-    max-width: 25rem;
+    max-width: 40rem;
     padding: 2rem;
 
     background-color: $purple;
@@ -53,6 +53,10 @@
 
     transform: translate(-50%, -50%);
     z-index: 1001;
+
+    h2 {
+        font-size: clamp(1.5rem, 4vw, 3.5rem);
+    }
 
     &__title {
         text-align: center;

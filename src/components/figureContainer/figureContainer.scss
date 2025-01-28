@@ -11,7 +11,13 @@
 
     img {
         width: 100%;
-        border-radius: $main-border-radius;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+        overflow: hidden;
+
+        border-radius: $main-border-radius $main-border-radius 0 0;
     }
 
     figcaption {
@@ -19,12 +25,26 @@
         text-align: center;
     }
 
-    @media (min-width: $tablet) {
+    @media (max-width: $large) {
+        img {
+            max-height: 350px;
+        }
+    }
 
+    @media (min-width: $large) {
+
+        display: grid;
+        grid-template-rows: auto 1fr;
+
+        width: 100%;
         max-width: 50%;
+        aspect-ratio: 16 / 9;
+
+        overflow: hidden;
         
         figcaption {
             padding: 1.5rem 0;
+            text-align: center;
         }
     }
 }

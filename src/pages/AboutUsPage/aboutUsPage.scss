@@ -10,12 +10,16 @@
         padding: calc($list-item-padding * 2) 0;
     }
 
+    .aboutUs__item:not(:last-of-type) {
+        padding-bottom: 2rem;
+    }
+
     .aboutUs__item:last-child p {
         padding-bottom: 0;
     }
 
 
-    @media (min-width: $tablet) {
+    @media (min-width: $large) {
         .aboutUs__item {
             display: flex;
             gap: 2rem;

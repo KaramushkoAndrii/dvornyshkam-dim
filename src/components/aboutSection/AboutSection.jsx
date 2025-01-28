@@ -1,5 +1,6 @@
 
 import { useTranslation } from 'react-i18next';
+import { motion } from 'motion/react';
 
 import AboutList from '../../data/aboutList';
 import AboutListItem from '../../data/aboutInfoList';
@@ -15,14 +16,18 @@ const AboutSection = () => {
             <p className='about__description'>{t('about.description')}</p>
 
             <div className='about__info'>
-                <ul className='about__info-list'>
+                <motion.ul initial={{x: -100, opacity: 0}}
+                           whileInView={{x: 0, opacity: 1}}
+                           transition={{duration: 1}}
+                           viewport={{once: true}}
+                           className='about__info-list'>
                     {AboutListItem.map((item, key) => (
                         <li key={key} className='about__info-list--item'>
                             {item.count} 
                             <span>{t(`${item.text}`)}</span>
                         </li>
                     ))}
-                </ul>
+                </motion.ul>
             </div>
 
             <ul className='about__list'>
