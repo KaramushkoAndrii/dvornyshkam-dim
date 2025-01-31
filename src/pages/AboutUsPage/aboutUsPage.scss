@@ -6,6 +6,8 @@
 .aboutUs {
     @include container();
 
+    overflow: hidden;
+
     p {
         padding: calc($list-item-padding * 2) 0;
     }

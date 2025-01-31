@@ -1,6 +1,8 @@
 
 import { useTranslation } from 'react-i18next';
+import { motion } from 'motion/react';
 
+import { slideFromLeft } from '../../components/Animations';
 import HelpListDetailed from '../../components/helpListDetailed/HelpListDetailed';
 import HelpListDetailedData from '../../data/helpListDetailedData';
 
@@ -16,8 +18,8 @@ const HelpPage = ({data, isOpen}) => {
     return (
         <section className='help__page'>
             <header className='help__header'>
-                <h2>{t(title)}</h2>
-                <p>{t(description)}</p>
+                <motion.h2 {...slideFromLeft}>{t(title)}</motion.h2>
+                <motion.p {...slideFromLeft}>{t(description)}</motion.p>
             </header>
             <HelpSection />
 

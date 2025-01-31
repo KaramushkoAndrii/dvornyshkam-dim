@@ -1,7 +1,9 @@
 
 
 import { useTranslation } from 'react-i18next';
+import { motion } from 'motion/react';
 
+import { slideFromBottom } from '../Animations';
 import {ReactComponent as TelegramIcon} from '../../images/telegram.svg';
 import Button from '../button/Button';
 import './contactForm.scss';
@@ -11,7 +13,7 @@ const ContactForm = ({data, isOpen}) => {
     const { t } = useTranslation();
 
     return (
-        <ul className="contactForm">
+        <motion.ul {...slideFromBottom} className="contactForm">
             {data.map((item, key) => (
                 <li key={key} className='contactForm__item'>
                     <p>{item.name}</p>
@@ -24,7 +26,7 @@ const ContactForm = ({data, isOpen}) => {
                 </li>
             ))}
             <Button text={t('buttons.contact')} onClick={isOpen}/>
-        </ul>
+        </motion.ul>
     )
 }
 

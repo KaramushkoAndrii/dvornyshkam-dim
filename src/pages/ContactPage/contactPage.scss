@@ -5,6 +5,7 @@
 
 .contact__page {
     @include container();
+    overflow: hidden;
 
     .contact__adres, .contact__social {
         display: flex;

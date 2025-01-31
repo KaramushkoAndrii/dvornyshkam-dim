@@ -34,3 +34,10 @@ export const rotateAndScale = {
     transition: {duration: 1},
     viewport: {once: true}
 }
+
+export const scale = {
+    initial: {scale: 0},
+    whileInView: {scale: 1},
+    transition: {duration: 1},
+    viewport: {once: true}
+}

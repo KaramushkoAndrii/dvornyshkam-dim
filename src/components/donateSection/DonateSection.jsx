@@ -12,7 +12,7 @@ const DonateSection = () => {
     const { t } = useTranslation();
 
     return (
-        <motion.section {...slideFromBottom} className='donate'>
+        <motion.section {...slideFromBottom} viewport={{once: false}} className='donate'>
             <h2 className='donate__title'>{t('donate.title')}</h2>
 
             <ul className='donate__option'>

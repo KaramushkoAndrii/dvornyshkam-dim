@@ -2,7 +2,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
 
-import { slideFromRight, slideFromLeft } from '../Animations';
+import { slideFromRight, slideFromLeft, scale } from '../Animations';
 import AboutList from '../../data/aboutList';
 import AboutListItem from '../../data/aboutInfoList';
 import './aboutSection.scss';
@@ -29,14 +29,14 @@ const AboutSection = () => {
                 </motion.ul>
             </div>
 
-            <ul className='about__list'>
+            <motion.ul className='about__list' {...scale}>
                 {AboutList.map((item, key) => (
                     <li key={key} className='about__item'>
                         <h3 className='about__item--title'>{t(`about-list.${item.title}`)}</h3>
                         <p className='about__item--content'>{t(`about-list.${item.content}`)}</p>
                     </li>
                 ))}
-            </ul>
+            </motion.ul>
         </section>
     )
 }
