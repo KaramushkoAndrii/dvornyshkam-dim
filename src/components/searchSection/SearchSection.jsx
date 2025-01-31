@@ -2,7 +2,9 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { motion } from 'motion/react';
 
+import { slideFromBottom } from '../Animations';
 import AnimalCard from '../AnimalCard/AnimalCard';
 import dogsDB from '../../data/dogsDB';
 import Button from '../button/Button';
@@ -47,12 +49,12 @@ const SearchSection = ({isOpen}) => {
                 <AnimalCard animal={currentAnimal} isOpen={isOpen}/>
             </div>
 
-            <div className='search__button-group'>
+            <motion.div className='search__button-group' {...slideFromBottom}>
                 <Button text={t('buttons.rerol')} onClick={animalRerol} disabled={isAnimating}/>
                 <Link to={'/about'}>
                     <Button text={t('buttons.about')} />
                 </Link>
-            </div>
+            </motion.div>
         </section>
     )
 }

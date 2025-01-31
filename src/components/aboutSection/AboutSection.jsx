@@ -2,6 +2,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
 
+import { slideFromRight, slideFromLeft } from '../Animations';
 import AboutList from '../../data/aboutList';
 import AboutListItem from '../../data/aboutInfoList';
 import './aboutSection.scss';
@@ -13,13 +14,11 @@ const AboutSection = () => {
     return (
         <section className='about'>
             <h2 className='about__title'>{t('about.title')}</h2>
-            <p className='about__description'>{t('about.description')}</p>
+            <motion.p className='about__description' {...slideFromLeft}>{t('about.description')}</motion.p>
 
             <div className='about__info'>
-                <motion.ul initial={{x: -100, opacity: 0}}
-                           whileInView={{x: 0, opacity: 1}}
-                           transition={{duration: 1}}
-                           viewport={{once: true}}
+                <motion.ul
+                        {...slideFromRight}
                            className='about__info-list'>
                     {AboutListItem.map((item, key) => (
                         <li key={key} className='about__info-list--item'>

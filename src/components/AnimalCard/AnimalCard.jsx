@@ -1,7 +1,8 @@
 
 import { useTranslation } from "react-i18next";
+import { motion } from "motion/react";
 
-
+import { rotateAndScale } from "../Animations";
 import { FaDog } from "react-icons/fa6";
 import { TbVaccine } from "react-icons/tb";
 
@@ -15,7 +16,9 @@ const AnimalCard = ({animal, isOpen}) => {
     const { t } = useTranslation();
 
     return (
-        <div className='animal'>
+        <motion.div 
+            {...rotateAndScale}
+            className='animal'>
             <div className='animal__info'>
                 <div className='animal__picture'>
                     <img src={img} alt={name} />
@@ -34,7 +37,7 @@ const AnimalCard = ({animal, isOpen}) => {
                 <button className="animal__choice" onClick={isOpen}>{t('search.choice')}</button>
                 <button className="animal__choice" onClick={isOpen}>{t('search.trustee')}</button>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

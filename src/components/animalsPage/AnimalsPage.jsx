@@ -66,9 +66,6 @@ const AnimalsPage = ({title, data = [], animal, isOpen}) => {
     const visibleData = useMemo(() => filteredData.slice(0, visibleCards), [filteredData, visibleCards]);
 
 
-    // const list = useMemo(() => data.slice(0, visibleCards), [data, visibleCards]);
-
-
     const loadMoreAnimals = () => {
         setVisibleCards((prev) => prev + 4);
     }

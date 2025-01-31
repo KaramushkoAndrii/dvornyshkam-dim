@@ -1,6 +1,8 @@
 
 import { useTranslation } from 'react-i18next';
+import { motion } from 'motion/react';
 
+import { slideFromBottom } from '../Animations';
 import DonateList from '../../data/donateList';
 import './donateSection.scss';
 
@@ -10,7 +12,7 @@ const DonateSection = () => {
     const { t } = useTranslation();
 
     return (
-        <section className='donate'>
+        <motion.section {...slideFromBottom} className='donate'>
             <h2 className='donate__title'>{t('donate.title')}</h2>
 
             <ul className='donate__option'>
@@ -25,7 +27,7 @@ const DonateSection = () => {
                     </li>
                 ))}
             </ul>
-        </section>
+        </motion.section>
     )
 }
 

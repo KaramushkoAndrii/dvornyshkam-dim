@@ -15,6 +15,10 @@
         font-size: clamp(1rem, 2.5vw, 6rem);
     }
 
+    &__info {
+        overflow: hidden;
+    }
+
     &__info-list {
         display: flex;
         flex-direction: column;
