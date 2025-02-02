@@ -15,4 +15,9 @@
         border: none;
         border-radius: $main-border-radius;
     }
+
+    @media (min-width: $large) {
+        width: 75%;
+        max-height: 75dvh;
+    }
 }
