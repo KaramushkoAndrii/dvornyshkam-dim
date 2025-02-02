@@ -3,14 +3,16 @@
 const AboutListItem = [
     {
         count: "2020",
-        text: "about-list-item.year"
+        text: "about-list-item.year",
     },
     {
-        count: "> 1000",
+        count: "1000",
+        symbol: ">",
         text: "about-list-item.animals"
     },
     {
-        count: "+ 150",
+        count: "150",
+        symbol: "+",
         text: "about-list-item.guardian"
     }
 ]

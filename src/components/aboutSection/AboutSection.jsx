@@ -2,6 +2,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
 
+import Counter from '../Counter';
 import { slideFromRight, slideFromLeft, scale } from '../Animations';
 import AboutList from '../../data/aboutList';
 import AboutListItem from '../../data/aboutInfoList';
@@ -22,7 +23,12 @@ const AboutSection = () => {
                            className='about__info-list'>
                     {AboutListItem.map((item, key) => (
                         <li key={key} className='about__info-list--item'>
-                            {item.count} 
+                            {item.symbol ? item.symbol : null}
+                            <Counter 
+                                startValue={0}
+                                endValue={parseInt(item.count.replace(/\D/g, ""), 10)}
+                                duration={2}
+                            />
                             <span>{t(`${item.text}`)}</span>
                         </li>
                     ))}

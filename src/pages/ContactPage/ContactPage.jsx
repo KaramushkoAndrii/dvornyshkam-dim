@@ -40,9 +40,11 @@ const ContactPage = ({data, social, isOpen}) => {
             </motion.div>
 
 
-            <VisitedUs data={VisitedUsDate} />
+            <div className='contact__contact'>
+                <VisitedUs data={VisitedUsDate} />
 
-            <Map data={''}/>
+                <Map data={''}/>
+            </div>
         </section>
     )
 }

@@ -38,4 +38,15 @@
             height: clamp(1rem, 4vw, 4rem);
         }
     }
+
+    @media (min-width: $tablet) {
+        a {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .mainButton {
+            width: 50%;
+        }
+    }
 }

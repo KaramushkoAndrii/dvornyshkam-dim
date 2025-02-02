@@ -1,23 +1,11 @@
 
+@import '../../style/var.scss';
 
-
-// .custom-cursor {
-//     position: fixed;
-//     width: 50px;
-//     height: 50px;
-//     // background: url('../../images/paw-cursor.svg') no-repeat center/contain; /* Лапка */
-//     pointer-events: none; /* Чтобы не блокировать элементы под курсором */
-//     transform: translate(-50%, -50%);
-//     z-index: 9999;
-//     transition: transform 0.1s ease-out;
-
-
-//     &.clicked {
-//         transform: translate(-50%, -50%) scale(0.9); /* Эффект "нажатия" */
-//     }
-// }
 
 .custom-cursor {
+  display: none;
+  
+  @media (min-width: $laptop) {
     position: fixed;
     width: 40px; /* Размер курсора */
     height: 40px;
@@ -30,8 +18,9 @@
     justify-content: center;
     align-items: center;
   }
+}
   
-  .custom-cursor.clicked {
-    transform: translate(-50%, -50%) scale(0.9); /* Легкий эффект уменьшения при клике */
-//     background-color: rgba(0, 0, 0, 0.1); /* Если нужно добавить фон при нажатии */
-  }
+ .custom-cursor.clicked {
+  transform: translate(-50%, -50%) scale(0.9); /* Легкий эффект уменьшения при клике */
+  //background-color: rgba(0, 0, 0, 0.1); /* Если нужно добавить фон при нажатии */
+}

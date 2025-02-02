@@ -8,8 +8,6 @@
 
     text-align: center;
 
-    // overflow: hidden;
-
 
     &__description {
         padding: 2rem 0;
@@ -18,6 +16,7 @@
     }
 
     &__info {
+        padding: 0 1rem;
         overflow: hidden;
     }
 
@@ -40,12 +39,15 @@
             position: relative;
 
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: flex-start;
 
             font-size: clamp(3rem, 2vw, 5rem);
 
             span {
+                width: 100%;
+
                 font-size: clamp(1.25rem, 3vw, 3rem);
             }
 
@@ -103,6 +105,9 @@
 
 
         &__info-list--item {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
         }
 
